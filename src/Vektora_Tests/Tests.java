@@ -25,7 +25,9 @@ import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 
 public class Tests implements ActionListener {
-	
+	void JautajumsDivi(){
+		
+	}
 	
 	void FrameMaina(JButton  UzTestu){
 		
@@ -159,7 +161,7 @@ public class Tests implements ActionListener {
 				Test.dispose();
 				
 				punkti.add(p);
-				
+				JautajumsDivi();
 				
 			
 			}else {
