@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 import java.util.Vector;
 
 import javax.swing.BorderFactory;
@@ -23,19 +24,203 @@ import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
+import javax.swing.filechooser.FileSystemView;
+
+import Sakums.SaktTestu;
 
 public class Tests implements ActionListener {
-	void JautajumsDivi(){
+void JautajumsDivi(){
 		
+		Test2 = new JFrame("Tests2");
+	      Test2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	      
+	      Test2.setSize(800, 490);
+	      Test2.setLayout(null);
+	     
+	      Test2.setResizable(false);
+	      Test2.setLocationRelativeTo(null);
+	      Test2.setVisible(true);
+	      
+	      Test2Jautajums1 = new JCheckBox("Atmiņas Apjoms");
+	      Test2Jautajums1.setBounds(290,237,200,20);
+	      Test2.add(Test2Jautajums1);
+	      Test2Jautajums2 = new JCheckBox("Maksimālā veselā skaitļa vērtība");
+	      Test2Jautajums2.setBounds(290,257,200,20);
+	      Test2.add(Test2Jautajums2);
+	      Test2Jautajums3 = new JCheckBox("");
+	      Test2Jautajums3.setBounds(290,277,100,20);
+	      Test2.add(Test2Jautajums3);
+	      Test2Jautajums4 = new JCheckBox("");
+	      Test2Jautajums4.setBounds(290,297,100,20);
+	      Test2.add(Test2Jautajums4);
+	      JButton Iesniekt = new JButton("Teksts");
+	      Iesniekt.setBounds(500, 350, 250, 50);
+	      Test2.add(Iesniekt);
+	      Color Crasa = new Color(253, 235, 208);
+	      Q2=new JLabel("Kādas ir 2 Vektora asķirības no ArrayList");
+	      Q2.setBounds(0,0,800,235);
+	        Q2.setFont(new Font("Arial",Font.BOLD,15));
+	        Q2.setBackground(Crasa);
+	        Q2.setOpaque(true);
+	        Q2.setBorder(new EmptyBorder(0,50,0,0));
+		Test2.add(Q2);
+			
+			p=0;
+			Iesniekt.addActionListener(e ->{
+				
+				if(Test2Jautajums1.isSelected() && Test2Jautajums2.isSelected() && !Test2Jautajums3.isSelected() && !Test2Jautajums4.isSelected()) {
+					Test2.dispose();
+					System.out.println(p);
+					punkti.add(p);
+					System.out.println("Jusu P: "+punkti);
+					//JautajumsTris();
+					Rezultats();
+				}else {
+					JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
+					if(p<3) {
+					p++;
+					}else {
+						
+					}
+				}
+			});
+	      
 	}
+void JautajumsTris() {
 	
+}
+	
+
+void Rezultats() {
+	int sum=0, DabutieP=0;
+	double IegutaAtzime = 0.0;
+	
+	
+	for (int punk : punkti) {
+         sum+= punk;
+         DabutieP=30-sum;
+         IegutaAtzime=DabutieP/3.0;
+    }
+
+	
+	Vertejums = new JFrame("Jusu Vertejums");
+	Vertejums.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+	Vertejums.setSize(800, 490);
+	Vertejums.setLayout(null);
+   
+	Vertejums.setResizable(false);
+	Vertejums.setLocationRelativeTo(null);
+	Vertejums.setVisible(true);
+	
+	Color Crasa = new Color(253, 235, 208);
+	
+	Atzime = new JLabel("<html>Jusu Vertejums<br>--------- "+f.format(IegutaAtzime)+" ---------</html>");
+	Atzime.setBounds(0,0,800,200);
+	Atzime.setFont(new Font("Arial",Font.BOLD,15));
+	Atzime.setBackground(Crasa);
+	Atzime.setOpaque(true);
+	Atzime.setBorder(new EmptyBorder(0,330,0,0));
+	Vertejums.add(Atzime);
+	
+	
+	 JButton DarbaApskate = new JButton("Apskatit Darbu");
+	 DarbaApskate.setBounds(500, 350, 250, 50);
+	    Vertejums.add(DarbaApskate);
+	   
+	    JButton Atpakal = new JButton("Apskatit Darbu");
+	    Atpakal.setBounds(500, 150, 250, 50);
+		    Vertejums.add(Atpakal);
+		    int uzd=0;
+			for (int i = 0; i < punkti.size(); i++) {
+		  		 
+		  		 uzd++;
+		  		 str+=uzd + " Uzdevums: "+(3-punkti.get(i)) +" Punkti\n";
+		      }
+			str+="Atzīme: "+f.format(IegutaAtzime);
+	    DarbaApskate.addActionListener(e ->{
+	    
+	    	 Uzdevumi();
+	    	
+			});
+	    Atpakal.addActionListener(e ->{
+	    	Vertejums.dispose();
+	    	SaktTestu Sakums = new SaktTestu();
+	    	
+			});
+	   if(PT2.isSelected()) {
+		   Saglabat(str, Persona);
+	   }else {
+	    Saglabat2(str, Persona);
+	   }
+}
+
+void Uzdevumi() {
+	
+	JOptionPane.showMessageDialog(null, str);
+	
+}
+static File darbvirsma= FileSystemView.getFileSystemView().getHomeDirectory();
+static String atrasanasVieta = darbvirsma.getAbsolutePath();
+
+static void Saglabat(String str, String Persona) {
+	try {
+        File mape = new File(atrasanasVieta + "\\" + "Vertejumi_Test");
+        if (!mape.exists()) {
+            mape.mkdir();
+        }
+        File pt2 = new File(mape, "2PT-2");
+        if(!pt2.exists()) {
+        	pt2.mkdir();
+        }
+        String FileNos = Persona + "_Tests_" + ".txt";
+        File pasutijums = new File(pt2,  FileNos);
+     
+        FileWriter fw = new FileWriter(pasutijums, true);
+        PrintWriter pw = new PrintWriter(fw);
+        pw.println(str);
+        pw.close();
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "An error occurred while writing the content.", "Error", JOptionPane.ERROR_MESSAGE);
+        e.printStackTrace();
+    }
+}
+
+static void Saglabat2(String str, String Persona) {
+	try {
+        File mape = new File(atrasanasVieta + "\\" + "Vertejumi_Test");
+        if (!mape.exists()) {
+            mape.mkdir();
+        }
+       
+        File pt1 = new File(mape, "2PT-1");
+        if(!pt1.exists()) {
+        	pt1.mkdir();
+        }
+        
+        String FileNos = Persona + "_Tests_" + ".txt";    
+        File pasutijums = new File(pt1,  FileNos);
+
+        
+
+        FileWriter fw = new FileWriter(pasutijums, true);
+        PrintWriter pw = new PrintWriter(fw);
+        pw.println(str);
+        pw.close();
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "An error occurred while writing the content.", "Error", JOptionPane.ERROR_MESSAGE);
+        e.printStackTrace();
+    }
+}
 	void FrameMaina(JButton  UzTestu){
 		
 		switchWindow(info, Test);
 		  
 		 return;
 	}
-	JFrame info, Test;
+	JFrame info, Test, Test2, Vertejums;
 	JRadioButton PT2;
 	JRadioButton PT1;
 	ButtonGroup Grupa;
@@ -43,7 +228,10 @@ public class Tests implements ActionListener {
 	String str="";
 	String Persona="";
 	JCheckBox Jautajums1, Jautajums2, Jautajums3, Jautajums4;
-	JLabel Q1;
+	JCheckBox Test2Jautajums1, Test2Jautajums2, Test2Jautajums3, Test2Jautajums4;
+	JLabel Q1, Q2;
+	JLabel Atzime;
+	DecimalFormat f=new DecimalFormat("#.##");
 	int p=0;
 	
 	Vector<Integer> punkti = new Vector<>();
