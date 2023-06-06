@@ -6,4 +6,5 @@
  *
  */
 module Makarovs_Eksamens {
+	requires java.desktop;
 }

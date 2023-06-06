@@ -1,10 +1,66 @@
 package Vektora_Tests;
 
-public class SaktTestu {
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+
+
+public class SaktTestu implements ActionListener {
+
+	
+	// TODO Auto-generated method stub
+	 JFrame frame = new JFrame();
+	 JButton SaktTestuPoga= new JButton("Tests");
+	 
+	 SaktTestu(){
+		 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		    frame.setSize(640,820);
+		    frame.setLayout(null);
+		    frame.setResizable(false);
+		    frame.setLocationRelativeTo(null);
+		    ImageIcon imageIcon = new ImageIcon(new ImageIcon("Sakums.png").getImage().getScaledInstance(640, 832, Image.SCALE_SMOOTH));
+		    JLabel background = new JLabel(imageIcon);
+		  
+		    background.setBounds(0, 0, frame.getWidth(), frame.getHeight());
+		   
+		    Font Izmers=new Font(SaktTestuPoga.getFont().getName(),SaktTestuPoga.getFont().getStyle(),30);
+		    SaktTestuPoga.setFont(Izmers);
+		    Color TextKrasa = new Color(3,	58,	53);
+		    Color Krasa = new Color(242,230,230);
+		    SaktTestuPoga.setBounds(210, 540, 250, 50);
+		    SaktTestuPoga.addActionListener(this);
+		    SaktTestuPoga.setFocusable(false);
+		    SaktTestuPoga.setBackground(Krasa);
+		    SaktTestuPoga.setForeground(TextKrasa);
+		    
+		
+		    frame.add(background);
+		    background.add(SaktTestuPoga); 
+		    frame.setVisible(true);
+		    
+	 }
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-System.out.println("Sakt");
+		SaktTestu ManPicerija = new SaktTestu();
 	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		 if(e.getSource()==SaktTestuPoga) {
+			   frame.dispose();
+		Tests TesuDala = new Tests(); 
+		 }
+		
+	
+}
 
 }
