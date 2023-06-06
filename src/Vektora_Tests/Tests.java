@@ -26,7 +26,7 @@ import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileSystemView;
 
-import Sakums.SaktTestu;
+
 
 public class Tests implements ActionListener {
 void JautajumsDivi(){
@@ -41,10 +41,10 @@ void JautajumsDivi(){
 	      Test2.setLocationRelativeTo(null);
 	      Test2.setVisible(true);
 	      
-	      Test2Jautajums1 = new JCheckBox("Atmiņas Apjoms");
+	      Test2Jautajums1 = new JCheckBox("Vektors ir sinhronizēts");
 	      Test2Jautajums1.setBounds(290,237,200,20);
 	      Test2.add(Test2Jautajums1);
-	      Test2Jautajums2 = new JCheckBox("Maksimālā veselā skaitļa vērtība");
+	      Test2Jautajums2 = new JCheckBox("Java Vector satur daudzas mantotas metodes, kas neietilpst kolekciju ietvarā.");
 	      Test2Jautajums2.setBounds(290,257,200,20);
 	      Test2.add(Test2Jautajums2);
 	      Test2Jautajums3 = new JCheckBox("");
@@ -73,8 +73,8 @@ void JautajumsDivi(){
 					System.out.println(p);
 					punkti.add(p);
 					System.out.println("Jusu P: "+punkti);
-					//JautajumsTris();
-					Rezultats();
+					JautajumsTris();
+					//Rezultats();
 				}else {
 					JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
 					if(p<3) {
@@ -87,7 +87,59 @@ void JautajumsDivi(){
 	      
 	}
 void JautajumsTris() {
-	
+	Test3 = new JFrame("Tests2");
+    Test3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    Test3.setSize(800, 490);
+    Test3.setLayout(null);
+   
+    Test3.setResizable(false);
+    Test3.setLocationRelativeTo(null);
+    Test3.setVisible(true);
+    
+    Test3Jautajums1 = new JCheckBox("Atmiņas Apjoms");
+    Test3Jautajums1.setBounds(290,237,200,20);
+    Test3.add(Test3Jautajums1);
+    Test3Jautajums3 = new JCheckBox("Maksimālā veselā skaitļa vērtība");
+    Test3Jautajums3.setBounds(290,277,200,20);
+    Test3.add(Test3Jautajums3);
+    Test3Jautajums2 = new JCheckBox("");
+    Test3Jautajums2.setBounds(290,257,100,20);
+    Test3.add(Test3Jautajums2);
+    Test3Jautajums4 = new JCheckBox("");
+    Test3Jautajums4.setBounds(290,297,100,20);
+    Test3.add(Test3Jautajums4);
+    JButton Iesniekt = new JButton("Teksts");
+    Iesniekt.setBounds(500, 350, 250, 50);
+    Test3.add(Iesniekt);
+    Color Crasa = new Color(253, 235, 208);
+    Q3=new JLabel("Kādi ir divi Vektora ierobežojumi?");
+    Q3.setBounds(0,0,800,235);
+      Q3.setFont(new Font("Arial",Font.BOLD,15));
+      Q3.setBackground(Crasa);
+      Q3.setOpaque(true);
+      Q3.setBorder(new EmptyBorder(0,50,0,0));
+	Test3.add(Q3);
+		
+		p=0;
+		Iesniekt.addActionListener(e ->{
+			
+			if(Test3Jautajums1.isSelected() && Test3Jautajums3.isSelected() && !Test3Jautajums2.isSelected() && !Test3Jautajums4.isSelected()) {
+				Test3.dispose();
+				System.out.println(p);
+				punkti.add(p);
+				System.out.println("Jusu P: "+punkti);
+				//JautajumsTris();
+				Rezultats();
+			}else {
+				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
+				if(p<3) {
+				p++;
+				}else {
+					
+				}
+			}
+		});
 }
 	
 
@@ -220,7 +272,7 @@ static void Saglabat2(String str, String Persona) {
 		  
 		 return;
 	}
-	JFrame info, Test, Test2, Vertejums;
+	JFrame info, Test, Test2, Test3, Vertejums;
 	JRadioButton PT2;
 	JRadioButton PT1;
 	ButtonGroup Grupa;
@@ -228,12 +280,12 @@ static void Saglabat2(String str, String Persona) {
 	String str="";
 	String Persona="";
 	JCheckBox Jautajums1, Jautajums2, Jautajums3, Jautajums4;
-	JCheckBox Test2Jautajums1, Test2Jautajums2, Test2Jautajums3, Test2Jautajums4;
-	JLabel Q1, Q2;
+	JCheckBox Test2Jautajums1, Test2Jautajums2, Test2Jautajums3, Test2Jautajums4, Test3Jautajums1, Test3Jautajums2, Test3Jautajums3, Test3Jautajums4;
+	JLabel Q1, Q2, Q3;
 	JLabel Atzime;
 	DecimalFormat f=new DecimalFormat("#.##");
 	int p=0;
-	
+	Vector<String> dal = new Vector<>();
 	Vector<Integer> punkti = new Vector<>();
 	Tests(){
 		info = new JFrame("Sūtītāja Info");
@@ -286,6 +338,57 @@ static void Saglabat2(String str, String Persona) {
           String surname = Uzvards.getText().trim();
           Persona = name + " " + surname;
      
+          
+          try {
+    		  File mape = new File(atrasanasVieta + "\\" + "Vertejumi_Test");
+    		  if (!mape.exists()) {
+                  mape.mkdir();
+              }
+    		  String rakstnieki="Rakstitaji" + ".txt";
+    	 File file= new File(mape, rakstnieki);
+    	  FileReader reader = new FileReader(file);
+          BufferedReader bufferedReader = new BufferedReader(reader);
+          
+          StringBuilder teksts = new StringBuilder();
+          String line;
+         
+          while ((line = bufferedReader.readLine()) != null) {
+          	teksts.append(line);
+          	teksts.append(System.lineSeparator());
+          	dal.add(line);
+          }
+        
+          bufferedReader.close();
+         
+    	  } catch (Exception a) {
+              JOptionPane.showMessageDialog(null, "Kluda.", "Error", JOptionPane.ERROR_MESSAGE);
+              a.printStackTrace();
+          }
+         
+    	 if(dal.contains(Persona)) {
+    		 JOptionPane.showMessageDialog(null, "Jus jau rakstijat testu", "Error", JOptionPane.ERROR_MESSAGE);
+    		
+    	 }else {
+    		 
+    	 	  try {
+    	    	  File mape = new File(atrasanasVieta + "\\" + "Vertejumi_Test");
+    	          if (!mape.exists()) {
+    	              mape.mkdir();
+    	          }
+    	          String FileNos ="Rakstitaji" + ".txt";    
+    	          File pasutijums = new File(mape,  FileNos);
+    	          
+    	          FileWriter fw = new FileWriter(pasutijums, true);
+    	          PrintWriter pw = new PrintWriter(fw);
+    	          
+    	          pw.println(Persona);
+    	          pw.close();
+    
+    	        
+    	      } catch (Exception a) {
+    	          JOptionPane.showMessageDialog(null, "Kļuda paradījās", "Error", JOptionPane.ERROR_MESSAGE);
+    	          a.printStackTrace();
+    	      }
     	
           if (!name.isEmpty() && !surname.isEmpty()) {
            
@@ -295,7 +398,7 @@ static void Saglabat2(String str, String Persona) {
           } else {
               JOptionPane.showMessageDialog(info, "Ludzu Ievadiet Vissus Datus");
           }
-    	 
+    	 }
       });
       
       Test = new JFrame("Tests");
