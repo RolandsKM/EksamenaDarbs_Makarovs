@@ -10,16 +10,19 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.util.Vector;
 
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
+import javax.swing.border.EmptyBorder;
 
 public class Tests implements ActionListener {
 	
@@ -37,6 +40,11 @@ public class Tests implements ActionListener {
 	JTextArea Vards, Uzvards;
 	String str="";
 	String Persona="";
+	JCheckBox Jautajums1, Jautajums2, Jautajums3, Jautajums4;
+	JLabel Q1;
+	int p=0;
+	
+	Vector<Integer> punkti = new Vector<>();
 	Tests(){
 		info = new JFrame("Sūtītāja Info");
         info.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -99,7 +107,76 @@ public class Tests implements ActionListener {
           }
     	 
       });
+      
+      Test = new JFrame("Tests");
+      Test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      
+      Test.setSize(800, 490);
+      Test.setLayout(null);
+     
+      Test.setResizable(false);
+      Test.setLocationRelativeTo(null);
+      Test.setVisible(false);
+      
+      Jautajums1 = new JCheckBox("[1, 4, 2, 5, 3, 6]");
+      Jautajums1.setBounds(290,237,100,20);
+      Test.add(Jautajums1);
+      Jautajums2 = new JCheckBox("1 2 3 4 5 6");
+      Jautajums2.setBounds(290,257,100,20);
+      Test.add(Jautajums2);
+      Jautajums3 = new JCheckBox("6 5 4 3 2 1");
+      Jautajums3.setBounds(290,277,100,20);
+      Test.add(Jautajums3);
+      Jautajums4 = new JCheckBox("[1, 2, 3, 4, 5, 6]");
+      Jautajums4.setBounds(290,297,100,20);
+      Test.add(Jautajums4);
+      JButton Iesniekt = new JButton("Teksts");
+      Iesniekt.setBounds(500, 350, 250, 50);
+		Test.add(Iesniekt);
+		 Color Crasa = new Color(253, 235, 208);
+		
+		   Q1 = new JLabel("<html><br>Kas tiks izdrukats ekrana Ja Kods Tiks Palaists?<br><br>"
+				+ "public static void main(String[] args) {<br><br>"
+		   		+ " Vector<Integer> vec = new Vector<>();<br>"
+		   		+ " vec.add(1); vec.add(4);<br>"
+		   		+ " vec.add(2); vec.add(5);<br>"
+		   		+ " vec.add(3);vec.add(6);<br>"
+		   		+ " System.out.println(vec);<br>"
+		   		+ " Collections.sort(vec);<br>"
+		   		+ " 	System.out.println(vec);<br>"
+		   		+ "	}</html>");
+		   
+	        Q1.setBounds(0,0,800,235);
+	        Q1.setFont(new Font("Arial",Font.BOLD,15));
+	        Q1.setBackground(Crasa);
+	        Q1.setOpaque(true);
+	        Q1.setBorder(new EmptyBorder(0,50,0,0));
+		Test.add(Q1);
+		
+		Iesniekt.addActionListener(e ->{
+			
+			if(Jautajums1.isSelected() && Jautajums4.isSelected() && !Jautajums2.isSelected() && !Jautajums3.isSelected()) {
+				Test.dispose();
+				
+				punkti.add(p);
+				
+				
+			
+			}else {
+				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
+				if(p<3) {
+				p++;
+				}
+			
+			}
+		});   
+	
+      
+      
 	}
+	
+	
+	
       private void switchWindow(JFrame currentWindow, JFrame tests) {
 	        currentWindow.setVisible(false);
 	        tests.setVisible(true);
