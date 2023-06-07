@@ -140,7 +140,7 @@ void JautajumsTris() {
 					AtbPirmo++;
 					uzPirmo.add(AtbPirmo);
 				}
-				Rezultats();
+				JautajumsCetri();
 			}else {
 				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
 				if(p<3) {
@@ -152,6 +152,74 @@ void JautajumsTris() {
 		});
 }
 	
+
+void JautajumsCetri() {
+	Test4 = new JFrame("Tests2");
+    Test4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    Test4.setSize(800, 490);
+    Test4.setLayout(null);
+   
+    Test4.setResizable(false);
+    Test4.setLocationRelativeTo(null);
+    Test4.setVisible(true);
+    
+    Test4Jautajums1 = new JCheckBox("10 Elementus");
+    Test4Jautajums1.setBounds(290,237,200,20);
+    Test4.add(Test4Jautajums1);
+    Test4Jautajums3 = new JCheckBox("Bezgalīgi Daudz");
+    Test4Jautajums3.setBounds(290,257,200,20);
+    Test4.add(Test4Jautajums3);
+    Test4Jautajums2 = new JCheckBox("4, jo vektora izmērs ir 4");
+    Test4Jautajums2.setBounds(290,300,100,20);
+    Test4.add(Test4Jautajums2);
+    Test4Jautajums4 = new JCheckBox("Bezgalīgi daudz");
+    Test4Jautajums4.setBounds(290,320,100,20);
+    Test4.add(Test4Jautajums4);
+    JButton Iesniekt = new JButton("Teksts");
+    Iesniekt.setBounds(500, 350, 250, 50);
+    Test4.add(Iesniekt);
+    Color Crasa = new Color(253, 235, 208);
+    	Q4=new JLabel("<html>Ja vektoram nav deklerēts izmērs,<br>tad vektora var iebāzt elementus...?</html>");
+    Q4.setBounds(0,0,800,235);
+      Q4.setFont(new Font("Arial",Font.BOLD,15));
+      Q4.setBackground(Crasa);
+      Q4.setOpaque(true);
+      Q4.setBorder(new EmptyBorder(0,50,0,0));
+	Test4.add(Q4);
+	Q4v2=new JLabel("<html>Ja vektoram ir deklerēts izmērs 4,<br>tad vektora var ielikt..(cik elementus?)</html>");
+	Q4v2.setBounds(0,100,800,235);
+	Q4v2.setFont(new Font("Arial",Font.BOLD,15));
+	Q4v2.setBackground(Crasa);
+	Q4v2.setOpaque(true);
+	Q4v2.setBorder(new EmptyBorder(0,50,0,0));
+  	Test4.add(Q4v2);
+		p=0;
+		Iesniekt.addActionListener(e ->{
+			
+			if(Test4Jautajums3.isSelected() && Test4Jautajums4.isSelected() && !Test4Jautajums1.isSelected() && !Test4Jautajums2.isSelected()) {
+				Test4.dispose();
+				System.out.println(p);
+				punkti.add(p);
+				System.out.println("Jusu P: "+punkti);
+				//JautajumsTris();
+				if(p==0) {
+					AtbPirmo=0;
+					AtbPirmo++;
+					uzPirmo.add(AtbPirmo);
+				}
+				Rezultats();
+			}else {
+				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
+				if(p<3) {
+				p++;
+				}else {
+					
+				}
+			}
+		});
+}
+
 
 void Rezultats() {
 	int sum=0, DabutieP=0, pirmo=0;
@@ -286,7 +354,7 @@ static void Saglabat2(String str, String Persona) {
 		  
 		 return;
 	}
-	JFrame info, Test, Test2, Test3, Vertejums;
+	JFrame info, Test, Test2, Test3, Test4, Vertejums;
 	JRadioButton PT2;
 	JRadioButton PT1;
 	ButtonGroup Grupa;
@@ -294,8 +362,9 @@ static void Saglabat2(String str, String Persona) {
 	String str="";
 	String Persona="";
 	JCheckBox Jautajums1, Jautajums2, Jautajums3, Jautajums4;
-	JCheckBox Test2Jautajums1, Test2Jautajums2, Test2Jautajums3, Test2Jautajums4, Test3Jautajums1, Test3Jautajums2, Test3Jautajums3, Test3Jautajums4;
-	JLabel Q1, Q2, Q3;
+	JCheckBox Test2Jautajums1, Test2Jautajums2, Test2Jautajums3, Test2Jautajums4, Test3Jautajums1, Test3Jautajums2, Test3Jautajums3, Test3Jautajums4,
+	Test4Jautajums1,Test4Jautajums2,Test4Jautajums3,Test4Jautajums4;
+	JLabel Q1, Q2, Q3, Q4, Q4v2;
 	JLabel Atzime;
 	DecimalFormat f=new DecimalFormat("#.##");
 	int p=0;
