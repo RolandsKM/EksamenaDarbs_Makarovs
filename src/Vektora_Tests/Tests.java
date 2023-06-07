@@ -73,6 +73,11 @@ void JautajumsDivi(){
 					System.out.println(p);
 					punkti.add(p);
 					System.out.println("Jusu P: "+punkti);
+					if(p==0) {
+						AtbPirmo=0;
+						AtbPirmo++;
+						uzPirmo.add(AtbPirmo);
+					}
 					JautajumsTris();
 					//Rezultats();
 				}else {
@@ -130,6 +135,11 @@ void JautajumsTris() {
 				punkti.add(p);
 				System.out.println("Jusu P: "+punkti);
 				//JautajumsTris();
+				if(p==0) {
+					AtbPirmo=0;
+					AtbPirmo++;
+					uzPirmo.add(AtbPirmo);
+				}
 				Rezultats();
 			}else {
 				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
@@ -144,7 +154,7 @@ void JautajumsTris() {
 	
 
 void Rezultats() {
-	int sum=0, DabutieP=0;
+	int sum=0, DabutieP=0, pirmo=0;
 	double IegutaAtzime = 0.0;
 	
 	
@@ -153,6 +163,10 @@ void Rezultats() {
          DabutieP=30-sum;
          IegutaAtzime=DabutieP/3.0;
     }
+	for (int punk : uzPirmo) {
+		pirmo+= punk;
+        
+   }
 
 	
 	Vertejums = new JFrame("Jusu Vertejums");
@@ -167,7 +181,7 @@ void Rezultats() {
 	
 	Color Crasa = new Color(253, 235, 208);
 	
-	Atzime = new JLabel("<html>Jusu Vertejums<br>--------- "+f.format(IegutaAtzime)+" ---------</html>");
+	Atzime = new JLabel("<html>Jusu Vertejums<br>--------- "+f.format(IegutaAtzime)+" ---------<br>Atbildējāt uz pirmo "+pirmo+"/10</html>");
 	Atzime.setBounds(0,0,800,200);
 	Atzime.setFont(new Font("Arial",Font.BOLD,15));
 	Atzime.setBackground(Crasa);
@@ -285,8 +299,10 @@ static void Saglabat2(String str, String Persona) {
 	JLabel Atzime;
 	DecimalFormat f=new DecimalFormat("#.##");
 	int p=0;
+	 int AtbPirmo=0;
 	Vector<String> dal = new Vector<>();
 	Vector<Integer> punkti = new Vector<>();
+	Vector<Integer> uzPirmo = new Vector<>();
 	Tests(){
 		info = new JFrame("Sūtītāja Info");
         info.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -452,6 +468,11 @@ static void Saglabat2(String str, String Persona) {
 				Test.dispose();
 				
 				punkti.add(p);
+				if(p==0) {
+					AtbPirmo=0;
+					AtbPirmo++;
+					uzPirmo.add(AtbPirmo);
+				}
 				JautajumsDivi();
 				
 			
