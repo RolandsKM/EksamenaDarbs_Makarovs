@@ -74,9 +74,7 @@ void JautajumsDivi(){
 					punkti.add(p);
 					System.out.println("Jusu P: "+punkti);
 					if(p==0) {
-						AtbPirmo=0;
-						AtbPirmo++;
-						uzPirmo.add(AtbPirmo);
+						uzPirmo.add(1);
 					}
 					JautajumsTris();
 					//Rezultats();
@@ -136,9 +134,7 @@ void JautajumsTris() {
 				System.out.println("Jusu P: "+punkti);
 				//JautajumsTris();
 				if(p==0) {
-					AtbPirmo=0;
-					AtbPirmo++;
-					uzPirmo.add(AtbPirmo);
+					uzPirmo.add(1);
 				}
 				JautajumsCetri();
 			}else {
@@ -204,9 +200,7 @@ void JautajumsCetri() {
 				System.out.println("Jusu P: "+punkti);
 				//JautajumsTris();
 				if(p==0) {
-					AtbPirmo=0;
-					AtbPirmo++;
-					uzPirmo.add(AtbPirmo);
+					uzPirmo.add(1);
 				}
 				JautajumsPieci();
 			}else {
@@ -270,9 +264,77 @@ void JautajumsPieci() {
 				System.out.println("Jusu P: "+punkti);
 				//JautajumsTris();
 				if(p==0) {
-					AtbPirmo=0;
-					AtbPirmo++;
-					uzPirmo.add(AtbPirmo);
+					uzPirmo.add(1);
+				}
+				JautajumsSesi();
+			}else {
+				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
+				if(p<3) {
+				p++;
+				}else {
+					
+				}
+			}
+		});
+}
+
+void JautajumsSesi() {
+	Test6 = new JFrame("Tests2");
+    Test6.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    Test6.setSize(800, 490);
+    Test6.setLayout(null);
+   
+    Test6.setResizable(false);
+    Test6.setLocationRelativeTo(null);
+    Test6.setVisible(true);
+    
+    Test6Jautajums1 = new JCheckBox("Vektoram nav metode addFirst()");
+    Test6Jautajums1.setBounds(290,237,200,20);
+    Test6.add(Test6Jautajums1);
+    Test6Jautajums3 = new JCheckBox("Kodā nav kļudas");
+    Test6Jautajums3.setBounds(290,257,200,20);
+    Test6.add(Test6Jautajums3);
+    Test6Jautajums2 = new JCheckBox("Vector<int> jānomain uz Vector<Integer>");
+    Test6Jautajums2.setBounds(290,300,100,20);
+    Test6.add(Test6Jautajums2);
+    Test6Jautajums4 = new JCheckBox("Vektors nav implamentēts");
+    Test6Jautajums4.setBounds(290,320,100,20);
+    Test6.add(Test6Jautajums4);
+    JButton Iesniekt = new JButton("Teksts");
+    Iesniekt.setBounds(500, 350, 250, 50);
+    Test6.add(Iesniekt);
+    Color Crasa = new Color(253, 235, 208);
+    	Q6=new JLabel("<html><br>Atrodi šī koda kļūdas<br>Vector<int> cip = new Vector<>();<br>"
+    			+ "		cip.add(1);<br>"
+    			+ "		cip.add(2);<br>"
+    			+ "		cip.add(3);<br>"
+    			+ "		System.out.println(cip);<br>"
+    			+ "		cip.addFirst(5);</html>");
+    Q6.setBounds(0,0,800,300);
+      Q6.setFont(new Font("Arial",Font.BOLD,15));
+      Q6.setBackground(Crasa);
+      Q6.setOpaque(true);
+      Q6.setBorder(new EmptyBorder(0,50,0,0));
+	Test6.add(Q6);
+//	Q5v2=new JLabel("<html>Ko dara size()</html>");
+//	Q5v2.setBounds(0,200,800,100);
+//	Q5v2.setFont(new Font("Arial",Font.BOLD,15));
+//	Q5v2.setBackground(Crasa);
+//	Q5v2.setOpaque(true);
+//	Q5v2.setBorder(new EmptyBorder(0,50,0,0));
+//  	Test5.add(Q5v2);
+		p=0;
+		Iesniekt.addActionListener(e ->{
+			
+			if(Test6Jautajums2.isSelected() && Test6Jautajums1.isSelected() && !Test6Jautajums3.isSelected() && !Test6Jautajums4.isSelected()) {
+				Test6.dispose();
+				System.out.println(p);
+				punkti.add(p);
+				System.out.println("Jusu P: "+punkti);
+				//JautajumsTris();
+				if(p==0) {
+					uzPirmo.add(1);
 				}
 				Rezultats();
 			}else {
@@ -419,7 +481,7 @@ static void Saglabat2(String str, String Persona) {
 		  
 		 return;
 	}
-	JFrame info, Test, Test2, Test3, Test4, Test5, Vertejums;
+	JFrame info, Test, Test2, Test3, Test4, Test5, Test6, Vertejums;
 	JRadioButton PT2;
 	JRadioButton PT1;
 	ButtonGroup Grupa;
@@ -428,12 +490,13 @@ static void Saglabat2(String str, String Persona) {
 	String Persona="";
 	JCheckBox Jautajums1, Jautajums2, Jautajums3, Jautajums4;
 	JCheckBox Test2Jautajums1, Test2Jautajums2, Test2Jautajums3, Test2Jautajums4, Test3Jautajums1, Test3Jautajums2, Test3Jautajums3, Test3Jautajums4,
-	Test4Jautajums1,Test4Jautajums2,Test4Jautajums3,Test4Jautajums4, Test5Jautajums1,Test5Jautajums2,Test5Jautajums3,Test5Jautajums4;
-	JLabel Q1, Q2, Q3, Q4, Q4v2, Q5, Q5v2;
+	Test4Jautajums1,Test4Jautajums2,Test4Jautajums3,Test4Jautajums4, Test5Jautajums1,Test5Jautajums2,Test5Jautajums3,Test5Jautajums4,
+	Test6Jautajums1,Test6Jautajums2,Test6Jautajums3,Test6Jautajums4;
+	JLabel Q1, Q2, Q3, Q4, Q4v2, Q5, Q5v2, Q6;
 	JLabel Atzime;
 	DecimalFormat f=new DecimalFormat("#.##");
 	int p=0;
-	 int AtbPirmo=0;
+	
 	Vector<String> dal = new Vector<>();
 	Vector<Integer> punkti = new Vector<>();
 	Vector<Integer> uzPirmo = new Vector<>();
@@ -603,9 +666,8 @@ static void Saglabat2(String str, String Persona) {
 				
 				punkti.add(p);
 				if(p==0) {
-					AtbPirmo=0;
-					AtbPirmo++;
-					uzPirmo.add(AtbPirmo);
+					
+					uzPirmo.add(1);
 				}
 				JautajumsDivi();
 				

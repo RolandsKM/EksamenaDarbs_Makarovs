@@ -2,9 +2,9 @@
  * 
  */
 /**
- * @author rolan
+ * @author 2PT-2
  *
  */
-module Makarovs_Eksamens {
+module EksamenaDarbs_Makarovs {
 	requires java.desktop;
 }
