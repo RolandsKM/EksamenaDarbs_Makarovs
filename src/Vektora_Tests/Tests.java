@@ -31,7 +31,7 @@ import javax.swing.filechooser.FileSystemView;
 public class Tests implements ActionListener {
 void JautajumsDivi(){
 		
-		Test2 = new JFrame("Tests2");
+		Test2 = new JFrame("Otrais Jautājums");
 	      Test2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	      
 	      Test2.setSize(800, 490);
@@ -42,27 +42,35 @@ void JautajumsDivi(){
 	      Test2.setVisible(true);
 	      
 	      Test2Jautajums1 = new JCheckBox("Vektors ir sinhronizēts");
-	      Test2Jautajums1.setBounds(290,237,200,20);
+	      Test2Jautajums1.setBounds(20,200,300,20);
+	      Test2Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
 	      Test2.add(Test2Jautajums1);
-	      Test2Jautajums2 = new JCheckBox("Java Vector satur daudzas mantotas metodes, kas neietilpst kolekciju ietvarā.");
-	      Test2Jautajums2.setBounds(290,257,200,20);
+	      Test2Jautajums2 = new JCheckBox("<html>Java Vector satur daudzas mantotas<br> metodes, kas neietilpst kolekciju ietvarā?</html>");
+	      Test2Jautajums2.setBounds(20,240,400,40);
+	      Test2Jautajums2.setFont(new Font("Arial",Font.BOLD,18));
 	      Test2.add(Test2Jautajums2);
-	      Test2Jautajums3 = new JCheckBox("");
-	      Test2Jautajums3.setBounds(290,277,100,20);
+	      Test2Jautajums3 = new JCheckBox("Nav Atšķirības, Abi ir identiski vienādi");
+	      Test2Jautajums3.setBounds(420,200,500,20);
+	      Test2Jautajums3.setFont(new Font("Arial",Font.BOLD,18));
 	      Test2.add(Test2Jautajums3);
-	      Test2Jautajums4 = new JCheckBox("");
-	      Test2Jautajums4.setBounds(290,297,100,20);
+	      Test2Jautajums4 = new JCheckBox("Vektors nav sinhronizēts");
+	      Test2Jautajums4.setBounds(420,250,300,20);
+	      Test2Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
 	      Test2.add(Test2Jautajums4);
 	      JButton Iesniekt = new JButton("Teksts");
 	      Iesniekt.setBounds(500, 350, 250, 50);
+	      Iesniekt.setBackground(Crasa);
+	      Iesniekt.setForeground(TextKrasa);
 	      Test2.add(Iesniekt);
-	      Color Crasa = new Color(253, 235, 208);
-	      Q2=new JLabel("Kādas ir 2 Vektora asķirības no ArrayList");
-	      Q2.setBounds(0,0,800,235);
+	     
+	      Q2=new JLabel("Kādas ir 2 Vektora asķirības no ArrayList?");
+	      Q2.setBounds(0,0,800,150);
 	        Q2.setFont(new Font("Arial",Font.BOLD,15));
 	        Q2.setBackground(Crasa);
 	        Q2.setOpaque(true);
 	        Q2.setBorder(new EmptyBorder(0,50,0,0));
+	        Q2.setBackground(Crasa);
+	        Q2.setForeground(TextKrasa);
 		Test2.add(Q2);
 			
 			p=0;
@@ -90,7 +98,7 @@ void JautajumsDivi(){
 	      
 	}
 void JautajumsTris() {
-	Test3 = new JFrame("Tests2");
+	Test3 = new JFrame("Trešais Jautājums");
     Test3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
     Test3.setSize(800, 490);
@@ -101,27 +109,34 @@ void JautajumsTris() {
     Test3.setVisible(true);
     
     Test3Jautajums1 = new JCheckBox("Atmiņas Apjoms");
-    Test3Jautajums1.setBounds(290,237,200,20);
+    Test3Jautajums1.setBounds(40,200,300,20);
+    Test3Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
     Test3.add(Test3Jautajums1);
     Test3Jautajums3 = new JCheckBox("Maksimālā veselā skaitļa vērtība");
-    Test3Jautajums3.setBounds(290,277,200,20);
+    Test3Jautajums3.setBounds(40,240,330,20);
+    Test3Jautajums3.setFont(new Font("Arial",Font.BOLD,18));
     Test3.add(Test3Jautajums3);
-    Test3Jautajums2 = new JCheckBox("");
-    Test3Jautajums2.setBounds(290,257,100,20);
+    Test3Jautajums2 = new JCheckBox("Vektoram nav ierobežojumi");
+    Test3Jautajums2.setBounds(400,200,300,20);
+    Test3Jautajums2.setFont(new Font("Arial",Font.BOLD,18));
     Test3.add(Test3Jautajums2);
-    Test3Jautajums4 = new JCheckBox("");
-    Test3Jautajums4.setBounds(290,297,100,20);
+    Test3Jautajums4 = new JCheckBox("Elementu ievades lielums");
+    Test3Jautajums4.setBounds(400,250,300,20);
+    Test3Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
     Test3.add(Test3Jautajums4);
     JButton Iesniekt = new JButton("Teksts");
     Iesniekt.setBounds(500, 350, 250, 50);
     Test3.add(Iesniekt);
-    Color Crasa = new Color(253, 235, 208);
+    Iesniekt.setBackground(Crasa);
+    Iesniekt.setForeground(TextKrasa);
     Q3=new JLabel("Kādi ir divi Vektora ierobežojumi?");
-    Q3.setBounds(0,0,800,235);
+    Q3.setBounds(0,0,800,150);
       Q3.setFont(new Font("Arial",Font.BOLD,15));
       Q3.setBackground(Crasa);
       Q3.setOpaque(true);
       Q3.setBorder(new EmptyBorder(0,50,0,0));
+      Q3.setBackground(Crasa);
+      Q3.setForeground(TextKrasa);
 	Test3.add(Q3);
 		
 		p=0;
@@ -150,7 +165,7 @@ void JautajumsTris() {
 	
 
 void JautajumsCetri() {
-	Test4 = new JFrame("Tests2");
+	Test4 = new JFrame("Ceturtais Jautājums");
     Test4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
     Test4.setSize(800, 490);
@@ -160,35 +175,50 @@ void JautajumsCetri() {
     Test4.setLocationRelativeTo(null);
     Test4.setVisible(true);
     
-    Test4Jautajums1 = new JCheckBox("10 Elementus");
-    Test4Jautajums1.setBounds(290,237,200,20);
+    Test4Jautajums1 = new JRadioButton("10 Elementus");
+    Test4Jautajums1.setBounds(100,140,150,20);
+    Test4Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
+ //   Test4Jautajums1.setSelected(true);
+    Test4Jautajums3 = new JRadioButton("Bezgalīgi Daudz");
+    Test4Jautajums3.setBounds(450,140,200,20);
+    Test4Jautajums3.setFont(new Font("Arial",Font.BOLD,18));
+    Test4Group = new ButtonGroup();
+    Test4Group.add(Test4Jautajums1);  Test4Group.add(Test4Jautajums3);
     Test4.add(Test4Jautajums1);
-    Test4Jautajums3 = new JCheckBox("Bezgalīgi Daudz");
-    Test4Jautajums3.setBounds(290,257,200,20);
     Test4.add(Test4Jautajums3);
-    Test4Jautajums2 = new JCheckBox("4, jo vektora izmērs ir 4");
-    Test4Jautajums2.setBounds(290,300,100,20);
-    Test4.add(Test4Jautajums2);
-    Test4Jautajums4 = new JCheckBox("Bezgalīgi daudz");
-    Test4Jautajums4.setBounds(290,320,100,20);
+    Test4Jautajums2 = new JRadioButton("4, jo vektora izmērs ir 4");
+    Test4Jautajums2.setBounds(100,300,250,20);
+    Test4Jautajums2.setFont(new Font("Arial",Font.BOLD,18));
+    
+    Test4Jautajums4 = new JRadioButton("Bezgalīgi daudz");
+    Test4Jautajums4.setBounds(450,300,200,20);
+    Test4Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
+    Test4Group2 = new ButtonGroup();
+    Test4Group2.add(Test4Jautajums2);  Test4Group2.add(Test4Jautajums4);
     Test4.add(Test4Jautajums4);
+    Test4.add(Test4Jautajums2);
     JButton Iesniekt = new JButton("Teksts");
     Iesniekt.setBounds(500, 350, 250, 50);
     Test4.add(Iesniekt);
-    Color Crasa = new Color(253, 235, 208);
+    Iesniekt.setBackground(Crasa);
+    Iesniekt.setForeground(TextKrasa);
     	Q4=new JLabel("<html>Ja vektoram nav deklerēts izmērs,<br>tad vektora var iebāzt elementus...?</html>");
-    Q4.setBounds(0,0,800,235);
+    Q4.setBounds(0,0,800,100);
       Q4.setFont(new Font("Arial",Font.BOLD,15));
       Q4.setBackground(Crasa);
       Q4.setOpaque(true);
       Q4.setBorder(new EmptyBorder(0,50,0,0));
+      Q4.setBackground(Crasa);
+      Q4.setForeground(TextKrasa);
 	Test4.add(Q4);
 	Q4v2=new JLabel("<html>Ja vektoram ir deklerēts izmērs 4,<br>tad vektora var ielikt..(cik elementus?)</html>");
-	Q4v2.setBounds(0,100,800,235);
+	Q4v2.setBounds(0,180,800,100);
 	Q4v2.setFont(new Font("Arial",Font.BOLD,15));
 	Q4v2.setBackground(Crasa);
 	Q4v2.setOpaque(true);
 	Q4v2.setBorder(new EmptyBorder(0,50,0,0));
+	Q4v2.setBackground(Crasa);
+	Q4v2.setForeground(TextKrasa);
   	Test4.add(Q4v2);
 		p=0;
 		Iesniekt.addActionListener(e ->{
@@ -224,28 +254,46 @@ void JautajumsPieci() {
     Test5.setLocationRelativeTo(null);
     Test5.setVisible(true);
     
-    Test5Jautajums1 = new JCheckBox("deklerē vektora izmēru");
-    Test5Jautajums1.setBounds(290,237,200,20);
+    
+    Test5Jautajums1 = new JRadioButton("deklerē vektora izmēru");
+    Test5Jautajums1.setBounds(100,140,250,20);
+    Test5Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
+    //Test5Jautajums1.setSelected();
+    Test5Jautajums3 = new JRadioButton("Parāda vektora izmēru");
+    Test5Jautajums3.setBounds(450,140,250,20);
+    Test5Jautajums3.setFont(new Font("Arial",Font.BOLD,18));
+    Test5Group = new ButtonGroup();
+    Test5Group.add(Test5Jautajums1);  Test5Group.add(Test5Jautajums3);
     Test5.add(Test5Jautajums1);
-    Test5Jautajums3 = new JCheckBox("Parāda vektora izmēru");
-    Test5Jautajums3.setBounds(290,257,200,20);
     Test5.add(Test5Jautajums3);
-    Test5Jautajums2 = new JCheckBox("Parāda Vektora izmēru");
-    Test5Jautajums2.setBounds(290,300,100,20);
-    Test5.add(Test5Jautajums2);
-    Test5Jautajums4 = new JCheckBox("Deklerē vektora izmēru");
-    Test5Jautajums4.setBounds(290,320,100,20);
+    Test5Jautajums2 = new JRadioButton("Parāda Vektora izmēru");
+    Test5Jautajums2.setBounds(100,300,250,20);
+    Test5Jautajums2.setFont(new Font("Arial",Font.BOLD,18));
+    
+    Test5Jautajums4 = new JRadioButton("Deklerē vektora izmēru");
+    Test5Jautajums4.setBounds(450,300,250,20);
+    Test5Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
+    Test5Group2 = new ButtonGroup();
+    Test5Group2.add(Test5Jautajums2);  Test5Group2.add(Test5Jautajums4);
     Test5.add(Test5Jautajums4);
+    Test5.add(Test5Jautajums2);
+    
+    
+   
     JButton Iesniekt = new JButton("Teksts");
     Iesniekt.setBounds(500, 350, 250, 50);
+    Iesniekt.setBackground(Crasa);
+    Iesniekt.setForeground(TextKrasa);
     Test5.add(Iesniekt);
-    Color Crasa = new Color(253, 235, 208);
+    
     	Q5=new JLabel("<html>Ko dara setSize()?</html>");
     Q5.setBounds(0,0,800,100);
       Q5.setFont(new Font("Arial",Font.BOLD,15));
       Q5.setBackground(Crasa);
       Q5.setOpaque(true);
       Q5.setBorder(new EmptyBorder(0,50,0,0));
+      Q5.setBackground(Crasa);
+      Q5.setForeground(TextKrasa);
 	Test5.add(Q5);
 	Q5v2=new JLabel("<html>Ko dara size()</html>");
 	Q5v2.setBounds(0,200,800,100);
@@ -253,6 +301,8 @@ void JautajumsPieci() {
 	Q5v2.setBackground(Crasa);
 	Q5v2.setOpaque(true);
 	Q5v2.setBorder(new EmptyBorder(0,50,0,0));
+	Q5v2.setBackground(Crasa);
+	Q5v2.setForeground(TextKrasa);
   	Test5.add(Q5v2);
 		p=0;
 		Iesniekt.addActionListener(e ->{
@@ -290,44 +340,48 @@ void JautajumsSesi() {
     Test6.setVisible(true);
     
     Test6Jautajums1 = new JCheckBox("Vektoram nav metode addFirst()");
-    Test6Jautajums1.setBounds(290,237,200,20);
+    Test6Jautajums1.setBounds(20,250,400,20);
+    Test6Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
     Test6.add(Test6Jautajums1);
     Test6Jautajums3 = new JCheckBox("Kodā nav kļudas");
-    Test6Jautajums3.setBounds(290,257,200,20);
+    Test6Jautajums3.setBounds(420,250,300,20);
+    Test6Jautajums3.setFont(new Font("Arial",Font.BOLD,18));
     Test6.add(Test6Jautajums3);
-    Test6Jautajums2 = new JCheckBox("Vector<int> jānomain uz Vector<Integer>");
-    Test6Jautajums2.setBounds(290,300,100,20);
+    Test6Jautajums2 = new JCheckBox("Vektors nav implamentēts");
+    Test6Jautajums2.setBounds(20,290,400,20);
+    Test6Jautajums2.setFont(new Font("Arial",Font.BOLD,18));
     Test6.add(Test6Jautajums2);
-    Test6Jautajums4 = new JCheckBox("Vektors nav implamentēts");
-    Test6Jautajums4.setBounds(290,320,100,20);
+    Test6Jautajums4 = new JCheckBox("Vektoram trūkst <Integer>");
+    Test6Jautajums4.setBounds(420,290,300,20);
+    Test6Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
     Test6.add(Test6Jautajums4);
     JButton Iesniekt = new JButton("Teksts");
     Iesniekt.setBounds(500, 350, 250, 50);
+    Iesniekt.setBackground(Crasa);
+    Iesniekt.setForeground(TextKrasa);
+
     Test6.add(Iesniekt);
-    Color Crasa = new Color(253, 235, 208);
-    	Q6=new JLabel("<html><br>Atrodi šī koda kļūdas<br>Vector<int> cip = new Vector<>();<br>"
+  
+    	Q6=new JLabel("<html><br>Atrodi šī koda kļūdas<br><br>Vector cip = new Vector<>();<br>"
     			+ "		cip.add(1);<br>"
     			+ "		cip.add(2);<br>"
     			+ "		cip.add(3);<br>"
     			+ "		System.out.println(cip);<br>"
     			+ "		cip.addFirst(5);</html>");
-    Q6.setBounds(0,0,800,300);
+    Q6.setBounds(0,0,800,200);
       Q6.setFont(new Font("Arial",Font.BOLD,15));
       Q6.setBackground(Crasa);
       Q6.setOpaque(true);
       Q6.setBorder(new EmptyBorder(0,50,0,0));
+      Q6.setBackground(Crasa);
+      Q6.setForeground(TextKrasa);
+
 	Test6.add(Q6);
-//	Q5v2=new JLabel("<html>Ko dara size()</html>");
-//	Q5v2.setBounds(0,200,800,100);
-//	Q5v2.setFont(new Font("Arial",Font.BOLD,15));
-//	Q5v2.setBackground(Crasa);
-//	Q5v2.setOpaque(true);
-//	Q5v2.setBorder(new EmptyBorder(0,50,0,0));
-//  	Test5.add(Q5v2);
+
 		p=0;
 		Iesniekt.addActionListener(e ->{
 			
-			if(Test6Jautajums2.isSelected() && Test6Jautajums1.isSelected() && !Test6Jautajums3.isSelected() && !Test6Jautajums4.isSelected()) {
+			if(Test6Jautajums4.isSelected() && Test6Jautajums1.isSelected() && !Test6Jautajums3.isSelected() && !Test6Jautajums2.isSelected()) {
 				Test6.dispose();
 				System.out.println(p);
 				punkti.add(p);
@@ -376,21 +430,28 @@ void Rezultats() {
 	
 	Color Crasa = new Color(253, 235, 208);
 	
-	Atzime = new JLabel("<html>Jusu Vertejums<br>--------- "+f.format(IegutaAtzime)+" ---------<br>Atbildējāt uz pirmo "+pirmo+"/10</html>");
-	Atzime.setBounds(0,0,800,200);
-	Atzime.setFont(new Font("Arial",Font.BOLD,15));
+	Atzime = new JLabel("<html>Jusu Vertejums<br>--------- "+f.format(IegutaAtzime)+" ---------</html>");
+	JLabel Atb=new JLabel("Atbildējāt uz pirmo "+pirmo+"/10");
+	Atzime.setBounds(0,0,800,100);
+	Atzime.setFont(new Font("Arial",Font.BOLD,30));
 	Atzime.setBackground(Crasa);
 	Atzime.setOpaque(true);
-	Atzime.setBorder(new EmptyBorder(0,330,0,0));
+	Atzime.setBorder(new EmptyBorder(0,280,0,0));
 	Vertejums.add(Atzime);
+	Atb.setBounds(0,80,800,100);
+	Atb.setFont(new Font("Arial",Font.BOLD,15));
+	Atb.setBackground(Crasa);
+	Atb.setOpaque(true);
+	Atb.setBorder(new EmptyBorder(0,310,0,0));
+	Vertejums.add(Atb);
 	
 	
 	 JButton DarbaApskate = new JButton("Apskatit Darbu");
-	 DarbaApskate.setBounds(500, 350, 250, 50);
+	 DarbaApskate.setBounds(50, 390, 250, 50);
 	    Vertejums.add(DarbaApskate);
 	   
-	    JButton Atpakal = new JButton("Apskatit Darbu");
-	    Atpakal.setBounds(500, 150, 250, 50);
+	    JButton Atpakal = new JButton("Uz Sākumu");
+	    Atpakal.setBounds(490, 390, 250, 50);
 		    Vertejums.add(Atpakal);
 		    int uzd=0;
 			for (int i = 0; i < punkti.size(); i++) {
@@ -482,25 +543,26 @@ static void Saglabat2(String str, String Persona) {
 		 return;
 	}
 	JFrame info, Test, Test2, Test3, Test4, Test5, Test6, Vertejums;
-	JRadioButton PT2;
-	JRadioButton PT1;
-	ButtonGroup Grupa;
+	JRadioButton PT2, PT1;
+	JRadioButton Test4Jautajums1,Test4Jautajums2,Test4Jautajums3,Test4Jautajums4,  Test5Jautajums1,Test5Jautajums2,Test5Jautajums3,Test5Jautajums4 ;
+	ButtonGroup Grupa, Test4Group, Test4Group2, Test5Group, Test5Group2;
 	JTextArea Vards, Uzvards;
 	String str="";
 	String Persona="";
 	JCheckBox Jautajums1, Jautajums2, Jautajums3, Jautajums4;
 	JCheckBox Test2Jautajums1, Test2Jautajums2, Test2Jautajums3, Test2Jautajums4, Test3Jautajums1, Test3Jautajums2, Test3Jautajums3, Test3Jautajums4,
-	Test4Jautajums1,Test4Jautajums2,Test4Jautajums3,Test4Jautajums4, Test5Jautajums1,Test5Jautajums2,Test5Jautajums3,Test5Jautajums4,
 	Test6Jautajums1,Test6Jautajums2,Test6Jautajums3,Test6Jautajums4;
 	JLabel Q1, Q2, Q3, Q4, Q4v2, Q5, Q5v2, Q6;
 	JLabel Atzime;
 	DecimalFormat f=new DecimalFormat("#.##");
 	int p=0;
-	
+	 Color Crasa = new Color(3,	58,	53);
+	    Color TextKrasa = new Color(242,230,230);
 	Vector<String> dal = new Vector<>();
 	Vector<Integer> punkti = new Vector<>();
 	Vector<Integer> uzPirmo = new Vector<>();
 	Tests(){
+		
 		info = new JFrame("Sūtītāja Info");
         info.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
@@ -550,7 +612,7 @@ static void Saglabat2(String str, String Persona) {
     	  String name = Vards.getText().trim();
           String surname = Uzvards.getText().trim();
           Persona = name + " " + surname;
-     
+         
           
           try {
     		  File mape = new File(atrasanasVieta + "\\" + "Vertejumi_Test");
@@ -623,23 +685,29 @@ static void Saglabat2(String str, String Persona) {
       Test.setResizable(false);
       Test.setLocationRelativeTo(null);
       Test.setVisible(false);
-      
+     
       Jautajums1 = new JCheckBox("[1, 4, 2, 5, 3, 6]");
-      Jautajums1.setBounds(290,237,100,20);
+      Jautajums1.setBounds(50,267,200,20);
+      Jautajums1.setFont(new Font("Arial",Font.BOLD,20));
       Test.add(Jautajums1);
       Jautajums2 = new JCheckBox("1 2 3 4 5 6");
-      Jautajums2.setBounds(290,257,100,20);
+      Jautajums2.setBounds(50,307,200,20);
+      Jautajums2.setFont(new Font("Arial",Font.BOLD,20));
       Test.add(Jautajums2);
       Jautajums3 = new JCheckBox("6 5 4 3 2 1");
-      Jautajums3.setBounds(290,277,100,20);
+      Jautajums3.setBounds(50,347,200,20);
+      Jautajums3.setFont(new Font("Arial",Font.BOLD,20));
       Test.add(Jautajums3);
       Jautajums4 = new JCheckBox("[1, 2, 3, 4, 5, 6]");
-      Jautajums4.setBounds(290,297,100,20);
+      Jautajums4.setBounds(50,387,200,20);
+      Jautajums4.setFont(new Font("Arial",Font.BOLD,20));
       Test.add(Jautajums4);
-      JButton Iesniekt = new JButton("Teksts");
-      Iesniekt.setBounds(500, 350, 250, 50);
+      JButton Iesniekt = new JButton("Iesniekt");
+      Iesniekt.setBounds(500, 370, 250, 50);
+      Iesniekt.setBackground(Crasa);
+      Iesniekt.setForeground(TextKrasa);
 		Test.add(Iesniekt);
-		 Color Crasa = new Color(253, 235, 208);
+		
 		
 		   Q1 = new JLabel("<html><br>Kas tiks izdrukats ekrana Ja Kods Tiks Palaists?<br><br>"
 				+ "public static void main(String[] args) {<br><br>"
@@ -657,6 +725,7 @@ static void Saglabat2(String str, String Persona) {
 	        Q1.setBackground(Crasa);
 	        Q1.setOpaque(true);
 	        Q1.setBorder(new EmptyBorder(0,50,0,0));
+	        Q1.setForeground(TextKrasa);
 		Test.add(Q1);
 		
 		Iesniekt.addActionListener(e ->{
@@ -669,8 +738,9 @@ static void Saglabat2(String str, String Persona) {
 					
 					uzPirmo.add(1);
 				}
+				 
 				JautajumsDivi();
-				
+				//Rezultats();
 			
 			}else {
 				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");

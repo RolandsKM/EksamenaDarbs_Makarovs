@@ -2,7 +2,7 @@
  * 
  */
 /**
- * @author 2PT-2
+ * @author rolan
  *
  */
 module EksamenaDarbs_Makarovs {
