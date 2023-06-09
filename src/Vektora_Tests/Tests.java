@@ -57,7 +57,7 @@ void JautajumsDivi(){
 	      Test2Jautajums4.setBounds(420,250,300,20);
 	      Test2Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
 	      Test2.add(Test2Jautajums4);
-	      JButton Iesniekt = new JButton("Teksts");
+	      JButton Iesniekt = new JButton("Nākamais ->");
 	      Iesniekt.setBounds(500, 350, 250, 50);
 	      Iesniekt.setBackground(Crasa);
 	      Iesniekt.setForeground(TextKrasa);
@@ -124,7 +124,7 @@ void JautajumsTris() {
     Test3Jautajums4.setBounds(400,250,300,20);
     Test3Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
     Test3.add(Test3Jautajums4);
-    JButton Iesniekt = new JButton("Teksts");
+    JButton Iesniekt = new JButton("Nākamais ->");
     Iesniekt.setBounds(500, 350, 250, 50);
     Test3.add(Iesniekt);
     Iesniekt.setBackground(Crasa);
@@ -197,7 +197,7 @@ void JautajumsCetri() {
     Test4Group2.add(Test4Jautajums2);  Test4Group2.add(Test4Jautajums4);
     Test4.add(Test4Jautajums4);
     Test4.add(Test4Jautajums2);
-    JButton Iesniekt = new JButton("Teksts");
+    JButton Iesniekt = new JButton("Nākamais ->");
     Iesniekt.setBounds(500, 350, 250, 50);
     Test4.add(Iesniekt);
     Iesniekt.setBackground(Crasa);
@@ -244,7 +244,7 @@ void JautajumsCetri() {
 		});
 }
 void JautajumsPieci() {
-	Test5 = new JFrame("Tests2");
+	Test5 = new JFrame("Piektais Jautājums");
     Test5.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
     Test5.setSize(800, 490);
@@ -280,7 +280,7 @@ void JautajumsPieci() {
     
     
    
-    JButton Iesniekt = new JButton("Teksts");
+    JButton Iesniekt = new JButton("Nākamais ->");
     Iesniekt.setBounds(500, 350, 250, 50);
     Iesniekt.setBackground(Crasa);
     Iesniekt.setForeground(TextKrasa);
@@ -329,7 +329,7 @@ void JautajumsPieci() {
 }
 
 void JautajumsSesi() {
-	Test6 = new JFrame("Tests2");
+	Test6 = new JFrame("Sestais Jautājums");
     Test6.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
     Test6.setSize(800, 490);
@@ -355,14 +355,14 @@ void JautajumsSesi() {
     Test6Jautajums4.setBounds(420,290,300,20);
     Test6Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
     Test6.add(Test6Jautajums4);
-    JButton Iesniekt = new JButton("Teksts");
+    JButton Iesniekt = new JButton("Nākamais ->");
     Iesniekt.setBounds(500, 350, 250, 50);
     Iesniekt.setBackground(Crasa);
     Iesniekt.setForeground(TextKrasa);
 
     Test6.add(Iesniekt);
-  
-    	Q6=new JLabel("<html><br>Atrodi šī koda kļūdas<br><br>Vector cip = new Vector<>();<br>"
+  String s="<";
+    	Q6=new JLabel("<html><br>Atrodi šī koda kļūdas<br><br>Vector int>> cip = new Vector<<>>();<br>"
     			+ "		cip.add(1);<br>"
     			+ "		cip.add(2);<br>"
     			+ "		cip.add(3);<br>"
@@ -390,7 +390,7 @@ void JautajumsSesi() {
 				if(p==0) {
 					uzPirmo.add(1);
 				}
-				Rezultats();
+				JautajumsSeptini();
 			}else {
 				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
 				if(p<3) {
@@ -400,6 +400,290 @@ void JautajumsSesi() {
 				}
 			}
 		});
+}
+void JautajumsSeptini() {
+	JFrame Test7;
+	JCheckBox Jautajums1, Jautajums2, Jautajums3, Jautajums4;
+	JLabel Q;
+	Test7 = new JFrame("Septītais Jautājums");
+    Test7.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    Test7.setSize(800, 490);
+    Test7.setLayout(null);
+   
+    Test7.setResizable(false);
+    Test7.setLocationRelativeTo(null);
+    Test7.setVisible(true);
+    
+    Jautajums1 = new JCheckBox("Vektors ir pilnībā pavedienu droš");
+    Jautajums1.setBounds(20,150,400,15);
+    Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
+    Test7.add(Jautajums1);
+    Jautajums2 = new JCheckBox("Vektori ir noderīgi kad velamies mainīt datu struktūras lielumu programmas vidū");
+    Jautajums2.setBounds(20,200,800,15);
+    Jautajums2.setFont(new Font("Arial",Font.BOLD,18));
+    Test7.add(Jautajums2);
+    Jautajums3 = new JCheckBox("<html>Īpašība ar dinamisku izmēru ir ļoti noderīga, tā ļauj iztērēt atmiņu,<br> ja mēs nezinām atmiņas lielumu</html>");
+    Jautajums3.setBounds(20,230,800,40);
+    Jautajums3.setFont(new Font("Arial",Font.BOLD,18));
+    Test7.add(Jautajums3);
+    Jautajums4 = new JCheckBox("Vissas atbildes ir pareizas");
+    Jautajums4.setBounds(20,300,300,15);
+    Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
+    Test7.add(Jautajums4);
+    JButton Iesniekt = new JButton("Nākamais ->");
+    Iesniekt.setBounds(500, 350, 250, 50);
+    Iesniekt.setBackground(Crasa);
+    Iesniekt.setForeground(TextKrasa);
+
+    Test7.add(Iesniekt);
+  
+    Q=new JLabel("<html>Vektora priekšrocības</html>");
+    Q.setBounds(0,0,800,100);
+      Q.setFont(new Font("Arial",Font.BOLD,15));
+      Q.setBackground(Crasa);
+      Q.setOpaque(true);
+      Q.setBorder(new EmptyBorder(0,50,0,0));
+      Q.setBackground(Crasa);
+      Q.setForeground(TextKrasa);
+
+	Test7.add(Q);
+
+		p=0;
+		Iesniekt.addActionListener(e ->{
+			
+			if(Jautajums2.isSelected() && Jautajums3.isSelected() && !Jautajums1.isSelected() && !Jautajums4.isSelected()) {
+				Test7.dispose();
+				System.out.println(p);
+				punkti.add(p);
+				System.out.println("Jusu P: "+punkti);
+				//JautajumsTris();
+				if(p==0) {
+					uzPirmo.add(1);
+				}
+				JautajumsAstoni();
+			}else {
+				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
+				if(p<3) {
+				p++;
+				}else {
+					
+				}
+			}
+		});
+}
+void JautajumsAstoni() {
+	JFrame Test;
+	JCheckBox Jautajums1, Jautajums2, Jautajums3, Jautajums4;
+	JLabel Q;
+	Test = new JFrame("Astotais Jautājums");
+    Test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    Test.setSize(800, 490);
+    Test.setLayout(null);
+   
+    Test.setResizable(false);
+    Test.setLocationRelativeTo(null);
+    Test.setVisible(true);
+    
+    Jautajums1 = new JCheckBox("Vector (int sākotnējā ietilpība, int pieaugums) ");
+    Jautajums1.setBounds(20,150,400,15);
+    Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
+    Test.add(Jautajums1);
+    Jautajums2 = new JCheckBox("Vector (int initialCapacity)");
+    Jautajums2.setBounds(20,200,300,15);
+    Jautajums2.setFont(new Font("Arial",Font.BOLD,18));
+    Test.add(Jautajums2);
+    Jautajums3 = new JCheckBox("Vektors ()");
+    Jautajums3.setBounds(20,230,300,40);
+    Jautajums3.setFont(new Font("Arial",Font.BOLD,18));
+    Test.add(Jautajums3);
+    Jautajums4 = new JCheckBox("Vissas atbildes ir pareizas");
+    Jautajums4.setBounds(20,300,300,15);
+    Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
+    Test.add(Jautajums4);
+    JButton Iesniekt = new JButton("Nākamais ->");
+    Iesniekt.setBounds(500, 350, 250, 50);
+    Iesniekt.setBackground(Crasa);
+    Iesniekt.setForeground(TextKrasa);
+
+    Test.add(Iesniekt);
+  
+    Q=new JLabel("<html>Izvēlies vissus vektora konstruktorus</html>");
+    Q.setBounds(0,0,800,100);
+      Q.setFont(new Font("Arial",Font.BOLD,15));
+      Q.setBackground(Crasa);
+      Q.setOpaque(true);
+      Q.setBorder(new EmptyBorder(0,50,0,0));
+      Q.setBackground(Crasa);
+      Q.setForeground(TextKrasa);
+
+	Test.add(Q);
+
+		p=0;
+		Iesniekt.addActionListener(e ->{
+			
+			if(Jautajums4.isSelected() || Jautajums1.isSelected() && Jautajums2.isSelected() && Jautajums3.isSelected()) {
+				Test.dispose();
+				System.out.println(p);
+				punkti.add(p);
+				System.out.println("Jusu P: "+punkti);
+				
+				if(p==0) {
+					uzPirmo.add(1);
+				}
+				JautajumsDevini();
+			}else {
+				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
+				if(p<3) {
+				p++;
+				}else {
+					
+				}
+			}
+		});
+}
+void JautajumsDevini() {
+	JFrame Test;
+	JCheckBox Jautajums1, Jautajums2, Jautajums3, Jautajums4;
+	JLabel Q;
+	Test = new JFrame("Devītais Jautājums");
+    Test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    Test.setSize(800, 490);
+    Test.setLayout(null);
+   
+    Test.setResizable(false);
+    Test.setLocationRelativeTo(null);
+    Test.setVisible(true);
+    
+    Jautajums1 = new JCheckBox("<html>Veiktspēja: Vektora sinhronizācija var samazināt veiktspēju salīdzinājumā<br> ar citām kolekciju klasēm, piemēram, ArrayList</html>");
+    Jautajums1.setBounds(20,150,800,40);
+    Jautajums1.setFont(new Font("Arial",Font.BOLD,16));
+    Test.add(Jautajums1);
+    Jautajums2 = new JCheckBox("<html>Līdzšinējais kods:Lai gan Vector joprojām tiek atbalstīta, jaunāks Java kods<br>bieži tiek rakstīts, izmantojot modernākas kolekciju klases, tāpēc var būt grūtāk atrast<br> piemērus un atbalstu Vector</html>");
+    Jautajums2.setBounds(20,200,800,60);
+    Jautajums2.setFont(new Font("Arial",Font.BOLD,16));
+    Test.add(Jautajums2);
+    Jautajums3 = new JCheckBox("Sinhronizācija:  Vektors ir sinhronizēts, tāpēc to var izmantot daudzpavedienu vidē.");
+    Jautajums3.setBounds(20,280,500,20);
+    Jautajums3.setFont(new Font("Arial",Font.BOLD,16));
+    Test.add(Jautajums3);
+    Jautajums4 = new JCheckBox("<html>Nevajadzīgas pieskaitāmās izmaksas: Ja jums nav nepieciešamas Vector sinhronizācijas<br> funkcijas, tā lietošana jūsu kodam pievienos nevajadzīgas pieskaitāmās izmaksas.</html>");
+    Jautajums4.setBounds(20,320,800,40);
+    Jautajums4.setFont(new Font("Arial",Font.BOLD,16));
+    Test.add(Jautajums4);
+    JButton Iesniekt = new JButton("Nākamais ->");
+    Iesniekt.setBounds(500, 370, 250, 50);
+    Iesniekt.setBackground(Crasa);
+    Iesniekt.setForeground(TextKrasa);
+
+    Test.add(Iesniekt);
+  
+    Q=new JLabel("<html>Kādi it vektora izmantošanas mīnusi </html>");
+    Q.setBounds(0,0,800,100);
+      Q.setFont(new Font("Arial",Font.BOLD,15));
+      Q.setBackground(Crasa);
+      Q.setOpaque(true);
+      Q.setBorder(new EmptyBorder(0,50,0,0));
+      Q.setBackground(Crasa);
+      Q.setForeground(TextKrasa);
+
+	Test.add(Q);
+
+		p=0;
+		Iesniekt.addActionListener(e ->{
+			
+			if(Jautajums1.isSelected() && Jautajums2.isSelected() && Jautajums4.isSelected() && !Jautajums3.isSelected()) {
+				Test.dispose();
+				System.out.println(p);
+				punkti.add(p);
+				System.out.println("Jusu P: "+punkti);
+				
+				if(p==0) {
+					uzPirmo.add(1);
+				}
+				JautajumsDesmit();
+			}else {
+				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
+				if(p<3) {
+				p++;
+				}else {
+					
+				}
+			}
+		});
+}
+void JautajumsDesmit() {
+JFrame Test;
+JCheckBox Jautajums1, Jautajums2, Jautajums3, Jautajums4;
+JLabel Q;
+Test = new JFrame("Desmitais Jaut;ajums");
+Test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+Test.setSize(800, 490);
+Test.setLayout(null);
+
+Test.setResizable(false);
+Test.setLocationRelativeTo(null);
+Test.setVisible(true);
+
+Jautajums1 = new JCheckBox("pievienojot");
+Jautajums1.setBounds(20,150,300,40);
+Jautajums1.setFont(new Font("Arial",Font.BOLD,16));
+Test.add(Jautajums1);
+Jautajums2 = new JCheckBox("Vektoram nav zemu veikspēju, vektors ir izcils");
+Jautajums2.setBounds(20,200,400,60);
+Jautajums2.setFont(new Font("Arial",Font.BOLD,16));
+Test.add(Jautajums2);
+Jautajums3 = new JCheckBox("meklējot");
+Jautajums3.setBounds(20,250,300,20);
+Jautajums3.setFont(new Font("Arial",Font.BOLD,16));
+Test.add(Jautajums3);
+Jautajums4 = new JCheckBox("Atjauninot tā elementus");
+Jautajums4.setBounds(20,300,300,40);
+Jautajums4.setFont(new Font("Arial",Font.BOLD,16));
+Test.add(Jautajums4);
+JButton Iesniekt = new JButton("Pabeikt");
+Iesniekt.setBounds(500, 370, 250, 50);
+Iesniekt.setBackground(Crasa);
+Iesniekt.setForeground(TextKrasa);
+
+Test.add(Iesniekt);
+
+Q=new JLabel("<html>Vektors ir sinhranizēts tāpēc tas nodrosina zemu veiktspēju....(kur?) </html>");
+Q.setBounds(0,0,800,100);
+  Q.setFont(new Font("Arial",Font.BOLD,15));
+  Q.setBackground(Crasa);
+  Q.setOpaque(true);
+  Q.setBorder(new EmptyBorder(0,50,0,0));
+  Q.setBackground(Crasa);
+  Q.setForeground(TextKrasa);
+
+Test.add(Q);
+
+	p=0;
+	Iesniekt.addActionListener(e ->{
+		
+		if(Jautajums1.isSelected() && Jautajums2.isSelected() && Jautajums4.isSelected() && !Jautajums3.isSelected()) {
+			Test.dispose();
+			System.out.println(p);
+			punkti.add(p);
+			System.out.println("Jusu P: "+punkti);
+			
+			if(p==0) {
+				uzPirmo.add(1);
+			}
+			Rezultats();
+		}else {
+			JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
+			if(p<3) {
+			p++;
+			}else {
+				
+			}
+		}
+	});
 }
 
 void Rezultats() {
@@ -430,7 +714,7 @@ void Rezultats() {
 	
 	Color Crasa = new Color(253, 235, 208);
 	
-	Atzime = new JLabel("<html>Jusu Vertejums<br>--------- "+f.format(IegutaAtzime)+" ---------</html>");
+	Atzime = new JLabel("<html>Jusu Vertejums<br>-------- "+f.format(IegutaAtzime)+" --------</html>");
 	JLabel Atb=new JLabel("Atbildējāt uz pirmo "+pirmo+"/10");
 	Atzime.setBounds(0,0,800,100);
 	Atzime.setFont(new Font("Arial",Font.BOLD,30));
@@ -542,6 +826,7 @@ static void Saglabat2(String str, String Persona) {
 		  
 		 return;
 	}
+	
 	JFrame info, Test, Test2, Test3, Test4, Test5, Test6, Vertejums;
 	JRadioButton PT2, PT1;
 	JRadioButton Test4Jautajums1,Test4Jautajums2,Test4Jautajums3,Test4Jautajums4,  Test5Jautajums1,Test5Jautajums2,Test5Jautajums3,Test5Jautajums4 ;
@@ -588,9 +873,10 @@ static void Saglabat2(String str, String Persona) {
 	    info.add(PT2);
 	    info.add(PT1);
 	    
-	    JButton UzTestu = new JButton("Teksts");
+	    JButton UzTestu = new JButton("Sākt");
 	    UzTestu.setBounds(500, 350, 250, 50);
-	   
+	    UzTestu.setBackground(Crasa);
+	    UzTestu.setForeground(TextKrasa);
         info.add(UzTestu);
 	     
 	    background.setBounds(0, 0, info.getWidth(), info.getHeight());
@@ -676,7 +962,7 @@ static void Saglabat2(String str, String Persona) {
     	 }
       });
       
-      Test = new JFrame("Tests");
+      Test = new JFrame("Pirmais Jautājums");
       Test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       
       Test.setSize(800, 490);
@@ -702,7 +988,7 @@ static void Saglabat2(String str, String Persona) {
       Jautajums4.setBounds(50,387,200,20);
       Jautajums4.setFont(new Font("Arial",Font.BOLD,20));
       Test.add(Jautajums4);
-      JButton Iesniekt = new JButton("Iesniekt");
+      JButton Iesniekt = new JButton("Nākamais ->");
       Iesniekt.setBounds(500, 370, 250, 50);
       Iesniekt.setBackground(Crasa);
       Iesniekt.setForeground(TextKrasa);
@@ -739,8 +1025,10 @@ static void Saglabat2(String str, String Persona) {
 					uzPirmo.add(1);
 				}
 				 
-				JautajumsDivi();
-				//Rezultats();
+				//JautajumsDivi();
+				//JautajumsDevini();
+				//JautajumsSesi();
+				Rezultats();
 			
 			}else {
 				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
