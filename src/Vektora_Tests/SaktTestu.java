@@ -19,7 +19,7 @@ public class SaktTestu implements ActionListener {
 	// TODO Auto-generated method stub
 	 JFrame frame = new JFrame();
 	 JButton SaktTestuPoga= new JButton("Tests");
-	 
+	 JButton Skolotajs = new JButton("skolotajs");
 	 SaktTestu(){
 		 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		    frame.setSize(640,820);
@@ -41,6 +41,12 @@ public class SaktTestu implements ActionListener {
 		    SaktTestuPoga.setBackground(Krasa);
 		    SaktTestuPoga.setForeground(TextKrasa);
 		    
+		    Skolotajs.setBounds(240,740, 180, 20);
+		    Skolotajs.addActionListener(this);
+		    Skolotajs.setFocusable(false);
+		    Skolotajs.setBackground(TextKrasa);
+		    Skolotajs.setForeground(Krasa);
+		    background.add(Skolotajs); 
 		
 		    frame.add(background);
 		    background.add(SaktTestuPoga); 
@@ -59,7 +65,10 @@ public class SaktTestu implements ActionListener {
 			   frame.dispose();
 		Tests TesuDala = new Tests(); 
 		 }
-		
+		 if(e.getSource()==Skolotajs) {
+			   frame.dispose();
+		Skolotajs TesuDala = new Skolotajs(); 
+		 }
 	
 }
 

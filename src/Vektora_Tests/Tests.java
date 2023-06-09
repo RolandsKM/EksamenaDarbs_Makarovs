@@ -1025,10 +1025,10 @@ static void Saglabat2(String str, String Persona) {
 					uzPirmo.add(1);
 				}
 				 
-				//JautajumsDivi();
+				JautajumsDivi();
 				//JautajumsDevini();
 				//JautajumsSesi();
-				Rezultats();
+				//Rezultats();
 			
 			}else {
 				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");
