@@ -71,6 +71,7 @@ JButton Log;
 	
 		if(e.getSource()==Log) {
 			if(n.equals("Mr.Rolands") && p.equals("parole123")) {
+				Join.dispose();
 				SkolotajuProfs skA = new SkolotajuProfs();
 			
 			

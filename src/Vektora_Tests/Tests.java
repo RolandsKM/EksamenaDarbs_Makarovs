@@ -566,7 +566,7 @@ void JautajumsDevini() {
     Jautajums2.setFont(new Font("Arial",Font.BOLD,16));
     Test.add(Jautajums2);
     Jautajums3 = new JCheckBox("Sinhronizācija:  Vektors ir sinhronizēts, tāpēc to var izmantot daudzpavedienu vidē.");
-    Jautajums3.setBounds(20,280,500,20);
+    Jautajums3.setBounds(20,280,600,20);
     Jautajums3.setFont(new Font("Arial",Font.BOLD,16));
     Test.add(Jautajums3);
     Jautajums4 = new JCheckBox("<html>Nevajadzīgas pieskaitāmās izmaksas: Ja jums nav nepieciešamas Vector sinhronizācijas<br> funkcijas, tā lietošana jūsu kodam pievienos nevajadzīgas pieskaitāmās izmaksas.</html>");
@@ -633,7 +633,7 @@ Jautajums1.setBounds(20,150,300,40);
 Jautajums1.setFont(new Font("Arial",Font.BOLD,16));
 Test.add(Jautajums1);
 Jautajums2 = new JCheckBox("Vektoram nav zemu veikspēju, vektors ir izcils");
-Jautajums2.setBounds(20,200,400,60);
+Jautajums2.setBounds(20,200,400,30);
 Jautajums2.setFont(new Font("Arial",Font.BOLD,16));
 Test.add(Jautajums2);
 Jautajums3 = new JCheckBox("meklējot");
@@ -665,7 +665,7 @@ Test.add(Q);
 	p=0;
 	Iesniekt.addActionListener(e ->{
 		
-		if(Jautajums1.isSelected() && Jautajums2.isSelected() && Jautajums4.isSelected() && !Jautajums3.isSelected()) {
+		if(Jautajums1.isSelected() && Jautajums3.isSelected() && Jautajums4.isSelected() && !Jautajums2.isSelected()) {
 			Test.dispose();
 			System.out.println(p);
 			punkti.add(p);
@@ -788,8 +788,8 @@ static void Saglabat(String str, String Persona) {
         pw.close();
 
     } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "An error occurred while writing the content.", "Error", JOptionPane.ERROR_MESSAGE);
-        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "error", "Error", JOptionPane.ERROR_MESSAGE);
+      
     }
 }
 
@@ -816,8 +816,8 @@ static void Saglabat2(String str, String Persona) {
         pw.close();
 
     } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "An error occurred while writing the content.", "Error", JOptionPane.ERROR_MESSAGE);
-        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Error.", "Error", JOptionPane.ERROR_MESSAGE);
+      
     }
 }
 	void FrameMaina(JButton  UzTestu){
@@ -922,8 +922,7 @@ static void Saglabat2(String str, String Persona) {
           bufferedReader.close();
          
     	  } catch (Exception a) {
-              JOptionPane.showMessageDialog(null, "Kluda.", "Error", JOptionPane.ERROR_MESSAGE);
-              a.printStackTrace();
+              
           }
          
     	 if(dal.contains(Persona)) {
@@ -948,7 +947,7 @@ static void Saglabat2(String str, String Persona) {
     	        
     	      } catch (Exception a) {
     	          JOptionPane.showMessageDialog(null, "Kļuda paradījās", "Error", JOptionPane.ERROR_MESSAGE);
-    	          a.printStackTrace();
+    	         
     	      }
     	
           if (!name.isEmpty() && !surname.isEmpty()) {
@@ -1026,9 +1025,7 @@ static void Saglabat2(String str, String Persona) {
 				}
 				 
 				JautajumsDivi();
-				//JautajumsDevini();
-				//JautajumsSesi();
-				//Rezultats();
+				
 			
 			}else {
 				JOptionPane.showMessageDialog(info, "Nav akķeksēts Pareizi");

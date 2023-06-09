@@ -47,7 +47,11 @@ public class SaktTestu implements ActionListener {
 		    Skolotajs.setBackground(TextKrasa);
 		    Skolotajs.setForeground(Krasa);
 		    background.add(Skolotajs); 
-		
+		    ImageIcon imageIcon2 = new ImageIcon(new ImageIcon("Vector.png").getImage().getScaledInstance(100, 200, Image.SCALE_SMOOTH));
+		    JLabel vektors = new JLabel(imageIcon2);
+		    vektors.setBounds(50, 500,100,200);
+		    background.add(vektors);
+		    frame.add(vektors);
 		    frame.add(background);
 		    background.add(SaktTestuPoga); 
 		    frame.setVisible(true);
@@ -68,6 +72,7 @@ public class SaktTestu implements ActionListener {
 		 if(e.getSource()==Skolotajs) {
 			   frame.dispose();
 		Skolotajs TesuDala = new Skolotajs(); 
+			
 		 }
 	
 }
