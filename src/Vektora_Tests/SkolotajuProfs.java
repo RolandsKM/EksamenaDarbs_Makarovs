@@ -27,7 +27,7 @@ public class SkolotajuProfs  implements ActionListener{
 	void Prog2() {
 		 File Mape = new File(atrasanasVieta, "Vertejumi_Test");
 	        if (!Mape.exists()) {
-	            System.out.println("Fails Nepastāv");
+	          
 	           
 	        }
 
@@ -35,7 +35,7 @@ public class SkolotajuProfs  implements ActionListener{
 	        File pt2Folder = new File(Mape, "2PT-2");
 	      
 	        if (!pt2Folder.exists() ) {
-	            System.out.println("Mape Nav.");
+	          
 	            
 	        }
 	     
@@ -85,7 +85,7 @@ public class SkolotajuProfs  implements ActionListener{
 	void Prog1() {
 		 File Mape = new File(atrasanasVieta, "Vertejumi_Test");
 	        if (!Mape.exists()) {
-	            System.out.println("Fails Nepastāv");
+	          
 	           
 	        }
 
@@ -93,7 +93,7 @@ public class SkolotajuProfs  implements ActionListener{
 	        File pt1Folder = new File(Mape, "2PT-1");
 	      
 	        if (!pt1Folder.exists() ) {
-	            System.out.println("Mape Nav.");
+	          
 	            
 	        }
 	     

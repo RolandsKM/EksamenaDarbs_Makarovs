@@ -40,6 +40,7 @@ public class SaktTestu implements ActionListener {
 		    SaktTestuPoga.setFocusable(false);
 		    SaktTestuPoga.setBackground(Krasa);
 		    SaktTestuPoga.setForeground(TextKrasa);
+		  
 		    
 		    Skolotajs.setBounds(240,740, 180, 20);
 		    Skolotajs.addActionListener(this);

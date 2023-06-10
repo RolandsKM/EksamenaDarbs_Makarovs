@@ -78,9 +78,9 @@ void JautajumsDivi(){
 				
 				if(Test2Jautajums1.isSelected() && Test2Jautajums2.isSelected() && !Test2Jautajums3.isSelected() && !Test2Jautajums4.isSelected()) {
 					Test2.dispose();
-					System.out.println(p);
+					
 					punkti.add(p);
-					System.out.println("Jusu P: "+punkti);
+					
 					if(p==0) {
 						uzPirmo.add(1);
 					}
@@ -144,10 +144,9 @@ void JautajumsTris() {
 			
 			if(Test3Jautajums1.isSelected() && Test3Jautajums3.isSelected() && !Test3Jautajums2.isSelected() && !Test3Jautajums4.isSelected()) {
 				Test3.dispose();
-				System.out.println(p);
+				
 				punkti.add(p);
-				System.out.println("Jusu P: "+punkti);
-				//JautajumsTris();
+				
 				if(p==0) {
 					uzPirmo.add(1);
 				}
@@ -178,7 +177,7 @@ void JautajumsCetri() {
     Test4Jautajums1 = new JRadioButton("10 Elementus");
     Test4Jautajums1.setBounds(100,140,150,20);
     Test4Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
- //   Test4Jautajums1.setSelected(true);
+ 
     Test4Jautajums3 = new JRadioButton("Bezgalīgi Daudz");
     Test4Jautajums3.setBounds(450,140,200,20);
     Test4Jautajums3.setFont(new Font("Arial",Font.BOLD,18));
@@ -225,10 +224,9 @@ void JautajumsCetri() {
 			
 			if(Test4Jautajums3.isSelected() && Test4Jautajums4.isSelected() && !Test4Jautajums1.isSelected() && !Test4Jautajums2.isSelected()) {
 				Test4.dispose();
-				System.out.println(p);
+			
 				punkti.add(p);
-				System.out.println("Jusu P: "+punkti);
-				//JautajumsTris();
+				
 				if(p==0) {
 					uzPirmo.add(1);
 				}
@@ -255,26 +253,24 @@ void JautajumsPieci() {
     Test5.setVisible(true);
     
     
-    Test5Jautajums1 = new JRadioButton("deklerē vektora izmēru");
-    Test5Jautajums1.setBounds(100,140,250,20);
+    JCheckBox Test5Jautajums1 = new JCheckBox("Vektors uztur ievietošanas kārtību tāpat kā ArrayList.");
+    Test5Jautajums1.setBounds(20,140,700,20);
     Test5Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
-    //Test5Jautajums1.setSelected();
-    Test5Jautajums3 = new JRadioButton("Parāda vektora izmēru");
-    Test5Jautajums3.setBounds(450,140,250,20);
+   
+    JCheckBox Test5Jautajums3 = new JCheckBox("Vektors nevar izmantojot veselu skaitļu indeksu");
+    Test5Jautajums3.setBounds(20,180,700,20);
     Test5Jautajums3.setFont(new Font("Arial",Font.BOLD,18));
-    Test5Group = new ButtonGroup();
-    Test5Group.add(Test5Jautajums1);  Test5Group.add(Test5Jautajums3);
+    
     Test5.add(Test5Jautajums1);
     Test5.add(Test5Jautajums3);
-    Test5Jautajums2 = new JRadioButton("Parāda Vektora izmēru");
-    Test5Jautajums2.setBounds(100,300,250,20);
+    JCheckBox Test5Jautajums2 = new JCheckBox("Vektors satur daudzas mantotas metodes");
+    Test5Jautajums2.setBounds(20,220,600,20);
     Test5Jautajums2.setFont(new Font("Arial",Font.BOLD,18));
     
-    Test5Jautajums4 = new JRadioButton("Deklerē vektora izmēru");
-    Test5Jautajums4.setBounds(450,300,250,20);
+    JCheckBox Test5Jautajums4 = new JCheckBox("Vektors nav sinhronizēts");
+    Test5Jautajums4.setBounds(20,260,250,20);
     Test5Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
-    Test5Group2 = new ButtonGroup();
-    Test5Group2.add(Test5Jautajums2);  Test5Group2.add(Test5Jautajums4);
+  
     Test5.add(Test5Jautajums4);
     Test5.add(Test5Jautajums2);
     
@@ -286,7 +282,7 @@ void JautajumsPieci() {
     Iesniekt.setForeground(TextKrasa);
     Test5.add(Iesniekt);
     
-    	Q5=new JLabel("<html>Ko dara setSize()?</html>");
+    	Q5=new JLabel("<html>Izvēlies patiesos apgalvojumus</html>");
     Q5.setBounds(0,0,800,100);
       Q5.setFont(new Font("Arial",Font.BOLD,15));
       Q5.setBackground(Crasa);
@@ -295,24 +291,15 @@ void JautajumsPieci() {
       Q5.setBackground(Crasa);
       Q5.setForeground(TextKrasa);
 	Test5.add(Q5);
-	Q5v2=new JLabel("<html>Ko dara size()</html>");
-	Q5v2.setBounds(0,200,800,100);
-	Q5v2.setFont(new Font("Arial",Font.BOLD,15));
-	Q5v2.setBackground(Crasa);
-	Q5v2.setOpaque(true);
-	Q5v2.setBorder(new EmptyBorder(0,50,0,0));
-	Q5v2.setBackground(Crasa);
-	Q5v2.setForeground(TextKrasa);
-  	Test5.add(Q5v2);
+	
 		p=0;
 		Iesniekt.addActionListener(e ->{
 			
 			if(Test5Jautajums2.isSelected() && Test5Jautajums1.isSelected() && !Test5Jautajums3.isSelected() && !Test5Jautajums4.isSelected()) {
 				Test5.dispose();
-				System.out.println(p);
+				
 				punkti.add(p);
-				System.out.println("Jusu P: "+punkti);
-				//JautajumsTris();
+				
 				if(p==0) {
 					uzPirmo.add(1);
 				}
@@ -340,19 +327,19 @@ void JautajumsSesi() {
     Test6.setVisible(true);
     
     Test6Jautajums1 = new JCheckBox("Vektoram nav metode addFirst()");
-    Test6Jautajums1.setBounds(20,250,400,20);
+    Test6Jautajums1.setBounds(20,250,400,30);
     Test6Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
     Test6.add(Test6Jautajums1);
     Test6Jautajums3 = new JCheckBox("Kodā nav kļudas");
-    Test6Jautajums3.setBounds(420,250,300,20);
+    Test6Jautajums3.setBounds(420,250,300,30);
     Test6Jautajums3.setFont(new Font("Arial",Font.BOLD,18));
     Test6.add(Test6Jautajums3);
     Test6Jautajums2 = new JCheckBox("Vektors nav implamentēts");
-    Test6Jautajums2.setBounds(20,290,400,20);
+    Test6Jautajums2.setBounds(20,290,400,30);
     Test6Jautajums2.setFont(new Font("Arial",Font.BOLD,18));
     Test6.add(Test6Jautajums2);
     Test6Jautajums4 = new JCheckBox("Vektoram trūkst <Integer>");
-    Test6Jautajums4.setBounds(420,290,300,20);
+    Test6Jautajums4.setBounds(420,290,300,30);
     Test6Jautajums4.setFont(new Font("Arial",Font.BOLD,18));
     Test6.add(Test6Jautajums4);
     JButton Iesniekt = new JButton("Nākamais ->");
@@ -383,10 +370,10 @@ void JautajumsSesi() {
 			
 			if(Test6Jautajums4.isSelected() && Test6Jautajums1.isSelected() && !Test6Jautajums3.isSelected() && !Test6Jautajums2.isSelected()) {
 				Test6.dispose();
-				System.out.println(p);
+			
 				punkti.add(p);
-				System.out.println("Jusu P: "+punkti);
-				//JautajumsTris();
+				
+				
 				if(p==0) {
 					uzPirmo.add(1);
 				}
@@ -416,11 +403,11 @@ void JautajumsSeptini() {
     Test7.setVisible(true);
     
     Jautajums1 = new JCheckBox("Vektors ir pilnībā pavedienu droš");
-    Jautajums1.setBounds(20,150,400,15);
+    Jautajums1.setBounds(20,150,400,20);
     Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
     Test7.add(Jautajums1);
     Jautajums2 = new JCheckBox("Vektori ir noderīgi kad velamies mainīt datu struktūras lielumu programmas vidū");
-    Jautajums2.setBounds(20,200,800,15);
+    Jautajums2.setBounds(20,200,800,20);
     Jautajums2.setFont(new Font("Arial",Font.BOLD,18));
     Test7.add(Jautajums2);
     Jautajums3 = new JCheckBox("<html>Īpašība ar dinamisku izmēru ir ļoti noderīga, tā ļauj iztērēt atmiņu,<br> ja mēs nezinām atmiņas lielumu</html>");
@@ -454,10 +441,9 @@ void JautajumsSeptini() {
 			
 			if(Jautajums2.isSelected() && Jautajums3.isSelected() && !Jautajums1.isSelected() && !Jautajums4.isSelected()) {
 				Test7.dispose();
-				System.out.println(p);
+			
 				punkti.add(p);
-				System.out.println("Jusu P: "+punkti);
-				//JautajumsTris();
+				
 				if(p==0) {
 					uzPirmo.add(1);
 				}
@@ -487,7 +473,7 @@ void JautajumsAstoni() {
     Test.setVisible(true);
     
     Jautajums1 = new JCheckBox("Vector (int sākotnējā ietilpība, int pieaugums) ");
-    Jautajums1.setBounds(20,150,400,15);
+    Jautajums1.setBounds(20,150,450,15);
     Jautajums1.setFont(new Font("Arial",Font.BOLD,18));
     Test.add(Jautajums1);
     Jautajums2 = new JCheckBox("Vector (int initialCapacity)");
@@ -525,9 +511,9 @@ void JautajumsAstoni() {
 			
 			if(Jautajums4.isSelected() || Jautajums1.isSelected() && Jautajums2.isSelected() && Jautajums3.isSelected()) {
 				Test.dispose();
-				System.out.println(p);
+				
 				punkti.add(p);
-				System.out.println("Jusu P: "+punkti);
+				
 				
 				if(p==0) {
 					uzPirmo.add(1);
@@ -566,7 +552,7 @@ void JautajumsDevini() {
     Jautajums2.setFont(new Font("Arial",Font.BOLD,16));
     Test.add(Jautajums2);
     Jautajums3 = new JCheckBox("Sinhronizācija:  Vektors ir sinhronizēts, tāpēc to var izmantot daudzpavedienu vidē.");
-    Jautajums3.setBounds(20,280,600,20);
+    Jautajums3.setBounds(20,280,700,20);
     Jautajums3.setFont(new Font("Arial",Font.BOLD,16));
     Test.add(Jautajums3);
     Jautajums4 = new JCheckBox("<html>Nevajadzīgas pieskaitāmās izmaksas: Ja jums nav nepieciešamas Vector sinhronizācijas<br> funkcijas, tā lietošana jūsu kodam pievienos nevajadzīgas pieskaitāmās izmaksas.</html>");
@@ -580,7 +566,7 @@ void JautajumsDevini() {
 
     Test.add(Iesniekt);
   
-    Q=new JLabel("<html>Kādi it vektora izmantošanas mīnusi </html>");
+    Q=new JLabel("<html>Kādi ir vektora izmantošanas mīnusi </html>");
     Q.setBounds(0,0,800,100);
       Q.setFont(new Font("Arial",Font.BOLD,15));
       Q.setBackground(Crasa);
@@ -596,9 +582,9 @@ void JautajumsDevini() {
 			
 			if(Jautajums1.isSelected() && Jautajums2.isSelected() && Jautajums4.isSelected() && !Jautajums3.isSelected()) {
 				Test.dispose();
-				System.out.println(p);
+				
 				punkti.add(p);
-				System.out.println("Jusu P: "+punkti);
+				
 				
 				if(p==0) {
 					uzPirmo.add(1);
@@ -667,9 +653,9 @@ Test.add(Q);
 		
 		if(Jautajums1.isSelected() && Jautajums3.isSelected() && Jautajums4.isSelected() && !Jautajums2.isSelected()) {
 			Test.dispose();
-			System.out.println(p);
+		
 			punkti.add(p);
-			System.out.println("Jusu P: "+punkti);
+		
 			
 			if(p==0) {
 				uzPirmo.add(1);
@@ -701,7 +687,8 @@ void Rezultats() {
         
    }
 
-	
+//	  Color TextKrasa = new Color(3,	58,	53);
+//	    Color Krasa = new Color(242,230,230);
 	Vertejums = new JFrame("Jusu Vertejums");
 	Vertejums.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
@@ -712,19 +699,23 @@ void Rezultats() {
 	Vertejums.setLocationRelativeTo(null);
 	Vertejums.setVisible(true);
 	
-	Color Crasa = new Color(253, 235, 208);
+	
 	
 	Atzime = new JLabel("<html>Jusu Vertejums<br>-------- "+f.format(IegutaAtzime)+" --------</html>");
 	JLabel Atb=new JLabel("Atbildējāt uz pirmo "+pirmo+"/10");
 	Atzime.setBounds(0,0,800,100);
 	Atzime.setFont(new Font("Arial",Font.BOLD,30));
+	
 	Atzime.setBackground(Crasa);
+	Atzime.setForeground(TextKrasa);
 	Atzime.setOpaque(true);
 	Atzime.setBorder(new EmptyBorder(0,280,0,0));
 	Vertejums.add(Atzime);
 	Atb.setBounds(0,80,800,100);
 	Atb.setFont(new Font("Arial",Font.BOLD,15));
+
 	Atb.setBackground(Crasa);
+	Atb.setForeground(TextKrasa);
 	Atb.setOpaque(true);
 	Atb.setBorder(new EmptyBorder(0,310,0,0));
 	Vertejums.add(Atb);
@@ -732,10 +723,14 @@ void Rezultats() {
 	
 	 JButton DarbaApskate = new JButton("Apskatit Darbu");
 	 DarbaApskate.setBounds(50, 390, 250, 50);
+	 DarbaApskate.setBackground(Crasa);
+	 DarbaApskate.setForeground(TextKrasa);
 	    Vertejums.add(DarbaApskate);
 	   
 	    JButton Atpakal = new JButton("Uz Sākumu");
 	    Atpakal.setBounds(490, 390, 250, 50);
+	    Atpakal.setBackground(Crasa);
+	    Atpakal.setForeground(TextKrasa);
 		    Vertejums.add(Atpakal);
 		    int uzd=0;
 			for (int i = 0; i < punkti.size(); i++) {
@@ -829,7 +824,7 @@ static void Saglabat2(String str, String Persona) {
 	
 	JFrame info, Test, Test2, Test3, Test4, Test5, Test6, Vertejums;
 	JRadioButton PT2, PT1;
-	JRadioButton Test4Jautajums1,Test4Jautajums2,Test4Jautajums3,Test4Jautajums4,  Test5Jautajums1,Test5Jautajums2,Test5Jautajums3,Test5Jautajums4 ;
+	JRadioButton Test4Jautajums1,Test4Jautajums2,Test4Jautajums3,Test4Jautajums4;
 	ButtonGroup Grupa, Test4Group, Test4Group2, Test5Group, Test5Group2;
 	JTextArea Vards, Uzvards;
 	String str="";
@@ -975,12 +970,12 @@ static void Saglabat2(String str, String Persona) {
       Jautajums1.setBounds(50,267,200,20);
       Jautajums1.setFont(new Font("Arial",Font.BOLD,20));
       Test.add(Jautajums1);
-      Jautajums2 = new JCheckBox("1 2 3 4 5 6");
+      Jautajums2 = new JCheckBox("1 4 3 2 5 6");
       Jautajums2.setBounds(50,307,200,20);
       Jautajums2.setFont(new Font("Arial",Font.BOLD,20));
       Test.add(Jautajums2);
-      Jautajums3 = new JCheckBox("6 5 4 3 2 1");
-      Jautajums3.setBounds(50,347,200,20);
+      Jautajums3 = new JCheckBox("Ekrānā netiks izdrukāts");
+      Jautajums3.setBounds(50,347,300,20);
       Jautajums3.setFont(new Font("Arial",Font.BOLD,20));
       Test.add(Jautajums3);
       Jautajums4 = new JCheckBox("[1, 2, 3, 4, 5, 6]");
