@@ -20,4 +20,5 @@
  Jums ari būs dota iespēja doties atpakaļ uz sākumu<br>
  Atkartoti testu jūs rakstīt nevarēsiet<br>
  # Prezentācija par Vektori programmēšanas valodā Java
-PK
+
+[Makarovs_Vektori_java (1).pptx](https://github.com/RolandsKM/EksamenaDarbs_Makarovs/files/11714288/Makarovs_Vektori_java.1.pptx)
