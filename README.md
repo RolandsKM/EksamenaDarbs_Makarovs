@@ -21,7 +21,7 @@
  Atkartoti rakstīt testu ar to pašu vārdu jūs nevarēsiet<br>
  # Prezentācija par Vektori programmēšanas valodā Java
 
-[Makarovs_Vektori_java (1).pptx](https://github.com/RolandsKM/EksamenaDarbs_Makarovs/files/11714288/Makarovs_Vektori_java.1.pptx)
+[Informatīvais materiāls(īstais)](https://github.com/RolandsKM/EksamenaDarbs_Makarovs/blob/master/Vektors_informat%C4%ABvais_materials.pptx)
 #### UML Diagramas
 [Activity Case](https://github.com/RolandsKM/EksamenaDarbs_Makarovs/blob/5cebaf5e4af950cf1f2288b8955b03f8559c90c1/UML%20diagramas/ActivityUMLDiagrama.png)<br>
 [Use Case](https://github.com/RolandsKM/EksamenaDarbs_Makarovs/blob/58b7b8a9d0003668cc14a20952691bbeec2e1c3e/UML%20diagramas/UseCaseDiagrama.png)
