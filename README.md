@@ -22,3 +22,5 @@
  # Prezentācija par Vektori programmēšanas valodā Java
 
 [Makarovs_Vektori_java (1).pptx](https://github.com/RolandsKM/EksamenaDarbs_Makarovs/files/11714288/Makarovs_Vektori_java.1.pptx)
+#### UML Diagramas
+[UML Diagramas](UML diagramas)
