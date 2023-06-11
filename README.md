@@ -20,4 +20,4 @@
  Jums ari būs dota iespēja doties atpakaļ uz sākumu<br>
  Atkartoti testu jūs rakstīt nevarēsiet<br>
  # Prezentācija par Vektori programmēšanas valodā Java
-
+PK
