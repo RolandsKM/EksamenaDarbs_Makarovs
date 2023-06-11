@@ -1,3 +1,3 @@
 # EksamenaDarbs_Makarovs
 ## Vektori programmēšanas valodā Java
-![My Remote Image](https://www.dropbox.com/s/.../my-remote-image.jpg?dl=0)
+![My Remote Image](https://static.vecteezy.com/system/resources/previews/020/488/252/original/java-icon-vector.jpg)
