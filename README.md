@@ -18,3 +18,6 @@
  Pēc Testu pabeikšamas jums būs iespēja redzēt jūsu rezultātu un uz cik jūs atbildējāt ar pirmo mēģinājumu<br>
  Kā ari jūs varēsiet apskatīt cik punktus jūs dabujāt katrā jautājumā, uzpiedot pogu testu apskate<br>
  Jums ari būs dota iespēja doties atpakaļ uz sākumu<br>
+ Atkartoti testu jūs rakstīt nevarēsiet<br>
+ # Prezentācija par Vektori programmēšanas valodā Java
+
