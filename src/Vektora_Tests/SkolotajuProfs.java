@@ -26,20 +26,9 @@ public class SkolotajuProfs  implements ActionListener{
 	
 	void Prog2() {
 		 File Mape = new File(atrasanasVieta, "Vertejumi_Test");
-	        if (!Mape.exists()) {
-	          
-	           
-	        }
-
-	       
-	        File pt2Folder = new File(Mape, "2PT-2");
-	      
-	        if (!pt2Folder.exists() ) {
-	          
-	            
-	        }
-	     
+	        File pt2Folder = new File(Mape, "2PT-2");     
 	        File[] files = pt2Folder.listFiles();
+	        
 	    	if (files.length == 0) {
 	    	    JOptionPane.showMessageDialog(null, "Mape is Tuksa: " + pt2Folder, 
 	    	            "Error", JOptionPane.ERROR_MESSAGE);
@@ -49,11 +38,9 @@ public class SkolotajuProfs  implements ActionListener{
 	    	for (int i = 0; i < files.length; i++) {
 	    		fileNosaukums[i] = files[i].getName();
 	    	}
-	    	String IzveletaisFails = (String) JOptionPane.showInputDialog(null, "Izvelies Failu:", 
-	    	        "Testi", JOptionPane.PLAIN_MESSAGE, null, fileNosaukums, fileNosaukums[0]);
-	    	if (IzveletaisFails == null) {
-	    	    return; 
-	    	}
+	    	
+	    	String IzveletaisFails = (String) JOptionPane.showInputDialog(null, "Izvelies Failu:", "Testi", JOptionPane.PLAIN_MESSAGE, null, fileNosaukums, fileNosaukums[0]);
+
 	    	for (File file : files) {
 	    	    if (file.getName().equals(IzveletaisFails)) {
 	    	        try {
@@ -84,19 +71,9 @@ public class SkolotajuProfs  implements ActionListener{
 	}
 	void Prog1() {
 		 File Mape = new File(atrasanasVieta, "Vertejumi_Test");
-	        if (!Mape.exists()) {
-	          
-	           
-	        }
 
-	       
 	        File pt1Folder = new File(Mape, "2PT-1");
 	      
-	        if (!pt1Folder.exists() ) {
-	          
-	            
-	        }
-	     
 	        File[] files = pt1Folder.listFiles();
 	    	if (files.length == 0) {
 	    	    JOptionPane.showMessageDialog(null, "Mape is Tuksa: " + pt1Folder, 
@@ -109,9 +86,9 @@ public class SkolotajuProfs  implements ActionListener{
 	    	}
 	    	String IzveletaisFails = (String) JOptionPane.showInputDialog(null, "Izvelies Failu:", 
 	    	        "Testi", JOptionPane.PLAIN_MESSAGE, null, fileNosaukums, fileNosaukums[0]);
-	    	if (IzveletaisFails == null) {
-	    	    return; 
-	    	}
+//	    	if (IzveletaisFails == null) {
+//	    	    return; 
+//	    	}
 	    	for (File file : files) {
 	    	    if (file.getName().equals(IzveletaisFails)) {
 	    	        try {

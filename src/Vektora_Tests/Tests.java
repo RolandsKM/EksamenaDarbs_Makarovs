@@ -687,8 +687,7 @@ void Rezultats() {
         
    }
 
-//	  Color TextKrasa = new Color(3,	58,	53);
-//	    Color Krasa = new Color(242,230,230);
+
 	Vertejums = new JFrame("Jusu Vertejums");
 	Vertejums.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     
@@ -948,7 +947,6 @@ static void Saglabat2(String str, String Persona) {
           if (!name.isEmpty() && !surname.isEmpty()) {
            
              
-              System.out.println("Test: " + Persona);
               FrameMaina(UzTestu);
           } else {
               JOptionPane.showMessageDialog(info, "Ludzu Ievadiet Vissus Datus");
